@@ -1,0 +1,39 @@
+/*GLOBAL styles*/
+*::after,
+*::before,/*para reiniciar los estilos*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+body{
+    margin: 0 auto;/*Con esto le decimos que centre nuestros items y texto*/
+    max-width: 1200px;/*Le decimos que utilice un estilo de 1200 pixeles*/
+    font-family: 'Lato';/*Con esto cambiamos el estilo de fuente*/
+    color:#333;/*le ponemos un color predeterminado al body*/
+
+}
+
+.icon-cart{
+    width: 40px;/*Altura*/
+    height: 40px;/*Ancho*/
+    /*aqui le estamos dando un tamaño mas pequeño a nuestro icono de bolsa para que este tenga simetria con el texto y nuestra pagina*/
+}
+/*Para darle un tamaño a nuestro icono del carrito o de la bolsa de compras utilizamos esta funcion*/
+
+img{
+    max-width: 100%;
+}/*con esto ahora vamos a decirle todas las imagenes tengan un tamaño maximo de 100% para evitar desbordes*/
+
+/*HEADER Styles*/
+
+header{
+    display: flex;
+    justify-content: space-between;
+    /*de esta manera separamos los items de nuestros productos y su informacion del texto tienda y nuestro iconode carrito*/
+    padding: 30px 0 40px 0;
+    /*para que nuestros atributos no esten tan pegados bamos a darle una separacion de 30 pixeles de la parte de arriba y 4 de la parte de abajo*/
+
+}

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible"content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tienda</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">inicio</a></li>
+                <li><a href="redes.html">Redes Sociales</a></li>
+                <li><a href="autobiografia.html">Sobre mi</a></li>
+                <li><a href="tienda.html">Tienda</a></li>
+                <!--esto es nuestro menu de navegacion en la pagina utilizando "href" para poder desplazarnos entre paginas facilmente-->
+            </ul>
+        </nav>
+        <h1>Tienda</h1>
+
+        <div class="container-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="icon-cart">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 10.5V6a3.75 3.75 0 1 0-7.5 0v4.5m11.356-1.993 1.263 12c.07.665-.45 1.243-1.119 1.243H4.25a1.125 1.125 0 0 1-1.12-1.243l1.264-12A1.125 1.125 0 0 1 5.513 7.5h12.974c.576 0 1.059.435 1.119 1.007ZM8.625 10.5a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Zm7.5 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Z" />
+              </svg>
+              <!--utilizamos el svg llamando a un icono externo de la pagina heroicons-->
+              
+        </div><!--creamos una clase para nuestros iconos-->
+
+        <div class="container-items">
+            <div class="item">
+                <figure>
+                    <img
+                        src="imagenes/playera1.png"
+                        alt="producto"
+                    />
+                    <!--Llamamos a la imagen del producto de forma local-->
+                    
+                </figure>
+                <!--Creamos un figure para poder llamar a nuestra imagen del producto-->
+                <div class="info-product">
+                    <h2>Playera negra</h2><!--Utilizamos un h2 para colocar un segundo titulo donde pondremos en nombre del producto-->
+                    <p class="price">$28</p><!--Utilizamos un p de tipo class para colocar el precio de nuestro producto -->
+                    <button>Añadir al carrito</button><!--Por ultimo añadimos un boton con texto dentro haciendo uso de la funcion "button"-->
+
+                </div>
+                <!--Creamos una clase para colocar la informacion de nuestro producto-->
+            </div>
+        </div>
+        <!--Creamos una nueva clase para los productos-->
+    </header>
+
+</body>
+</html>
