@@ -37,3 +37,50 @@ header{
     /*para que nuestros atributos no esten tan pegados bamos a darle una separacion de 30 pixeles de la parte de arriba y 4 de la parte de abajo*/
 
 }
+
+/* MAIN*/
+
+.container-items{
+    display: grid;/*Damos u valor al display*/
+    grid-template-columns: repeat(3, 1fr);/*aqui le damos un tamaño a la cuadricula de nuestros productos*/
+    gap: 20px;/*Ahora le damos una separacion a los productos para que se vean mejor y menos amontonados*/
+}
+/*Para que nuestros productos queden ordenados en cuadriculas y mejorar el diseño de nuestra pagina llamamos a la clase container-items*/
+
+.item{
+    border-radius: 10px;/*le damos un limite para el borde de nuestra imagen de producto*/
+}/*llamamos a nuestra clase item para darle algo mas de diseño*/
+
+.item:hover{
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.20);/*hacemos uso de la funcionn "box-shadow" para dar sombra a nuestros elemtos*/
+}/*volvemos a llamar a nuestra clase item para poder darle sombra a nuestras imagenes de producto*/
+
+.item img{
+    width: 100%;/*con esto ponemos que tenga un ancho del 100%*/
+    height: 300px;/*con esto decimos que tendra una altura de 300 px*/
+    object-fit: cover;/*para que no se deforme nuestra imagen al modificar los tamaños originales usamos esta funcion*/
+    border-radius: 10px 10px 0 0;/*para que resalte mas el producto que estamos eñalando con el mouse usaremos esta funcion la cual dara una sombra interactiva a nuestros productos*/
+    transition: all .5s;/*para que el zoom que se hara a la imagen no sea brusco si no mas fluido usamos esta funcion de transition y dandole un valor en segundo en este caso .5s (segundos)*/
+}/*con esto vamos a proporcionar nuestras imagenes todas iguales*/
+
+.item figure{
+    overflow: hidden;/*mantiene la imagen dentro del borde de nuestro contenedor*/
+}/*evita que al hacer zoom cuando hacermamos el mouse a la imagen esta no pierda el tamaño original del borde que le dimos al principio*/
+
+.item:hover img{
+    transform: scale(1.2);/*con esto le damos la escala que queremos que aumente al acercar el mouse*/
+}/*animacion de zoom al señalar un producto*/
+
+.info-product{
+    padding: 15px 30px;/*le damos una pequeña separacion a los items para un mejor orden y posterior mente hacer que todos sean del mismo tamaño con 15px de arriba y abajo y 30 de izquierda y derecha*/
+    line-height: 2;/*asi le damos un interlineado a nuestro texto de informacion del producto*/
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+}
+
+.price{
+    font-size: 18px;
+    font-weight: 900px;
+}
