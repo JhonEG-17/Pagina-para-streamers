@@ -1,10 +1,19 @@
-/*GLOBAL styles*/
+/*     Import google fonts  */
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
+
+/*  GLOBAL styles   */
+
 *::after,
 *::before,/*para reiniciar los estilos*/
 *{
     margin: 0;
     padding: 0;
+    outline: none;
+    border: none;
+    text-decoration: none;
     box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
 
 }
 
@@ -13,7 +22,82 @@ body{
     max-width: 1200px;/*Le decimos que utilice un estilo de 1200 pixeles*/
     font-family: 'Lato';/*Con esto cambiamos el estilo de fuente*/
     color:#333;/*le ponemos un color predeterminado al body*/
+    background: #dfe9f5;/*para el menu desplegable*/
 
+}
+nav{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    height: 100%;
+    left: 0;
+    background: #fff;
+    width: 90px;
+    overflow: hidden;
+    transition: width 0.2s linear;
+    box-shadow: 0 20px 35px rgba(0, 0, 0, 0.1);
+
+}/*para el menu desplegable*/
+
+.menu-icon{
+    text-align: center;
+    display: flex;
+    transition: all 0.5s ease;
+    margin: 10px 0 0 10px;
+    
+}
+
+.menu-icon{
+    width: 40px;/*alto*/
+    height: 40px;/*ancho*/
+    border-radius: 50%;
+}/*le damos tamaño proporcionado con esto a nuestro icono para opciones*/
+
+.icon span{
+    font-weight: bold;
+    padding-left: 15px;
+    font-size: 18px;
+    text-transform: uppercase;
+
+}
+*{
+    position: relative;
+    color: rgb(85, 83, 83);
+    font-size: 14px;
+    display: table;
+    width: 300px;
+    padding: 10px;
+}
+
+.fas{
+    position: relative;
+    width: 70px;
+    height: 40px;
+    top: 14px;
+    font-size: 20px;
+    text-align: center;
+}
+
+.nav-item{
+    position: relative;
+    top: 12px;
+    margin-left: 18px;
+
+}
+
+@:hover{
+    background: #eee;
+
+}
+
+nav:hover{
+    width: 280px;
+    transition: all 0.5s ease;
+}
+
+.logout{
+    position: absolute;
+    bottom: 0;
 }
 
 .icon-cart{
@@ -32,7 +116,7 @@ img{
 header{
     display: flex;
     justify-content: space-between;
-    /*de esta manera separamos los items de nuestros productos y su informacion del texto tienda y nuestro iconode carrito*/
+    /*de esta manera separamos los items de nuestros productos y su informacion del texto tienda y nuestro icono de carrito*/
     padding: 30px 0 40px 0;
     /*para que nuestros atributos no esten tan pegados bamos a darle una separacion de 30 pixeles de la parte de arriba y 4 de la parte de abajo*/
 
@@ -41,7 +125,7 @@ header{
 /* MAIN*/
 
 .container-items{
-    display: grid;/*Damos u valor al display*/
+    display: grid;/*Damos un valor al display*/
     grid-template-columns: repeat(3, 1fr);/*aqui le damos un tamaño a la cuadricula de nuestros productos*/
     gap: 20px;/*Ahora le damos una separacion a los productos para que se vean mejor y menos amontonados*/
 }
@@ -83,4 +167,13 @@ header{
 .price{
     font-size: 18px;
     font-weight: 900px;
-}
+}/*Le damos formato al presio de nuestro producto*/
+
+.info-product button{
+    border: none;/*aqui quitamos los bordes*/
+    background: none;
+    background-color: black;/*esto es para que el recuadro sea negro*/
+    color: #fff;/*resaltamos el texto dandole color blanco*/
+    padding: 15px 10px;/*le damos una separacion de 15 px izquierda derecha y 10px de arriba y abajo para centrar el texto del boton*/
+    cursor: pointer;/*para que se vea mas estetico cambiamos el tipo de puntero a el de manita cuando este se encuentre sobre el boton*/
+}/*damos formato al boton de añadir al carrito*/
