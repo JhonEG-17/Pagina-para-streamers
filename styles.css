@@ -104,8 +104,14 @@ nav:hover{
     width: 40px;/*Altura*/
     height: 40px;/*Ancho*/
     /*aqui le estamos dando un tamaño mas pequeño a nuestro icono de bolsa para que este tenga simetria con el texto y nuestra pagina*/
+    stroke: #000;
+
 }
 /*Para darle un tamaño a nuestro icono del carrito o de la bolsa de compras utilizamos esta funcion*/
+
+.icon-cart:hover{
+    cursor: pointer;
+}
 
 img{
     max-width: 100%;
@@ -122,12 +128,112 @@ header{
 
 }
 
+.container-icon{
+    position: relative;
+}
+
+.count-products{
+    position: absolute;
+    top: 55%;
+    right: 0;
+    
+    background-color: #000;
+    color: #fff;
+    width: 25px;
+    height: 25px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+
+}
+
+#contador-productos{
+    font-size: 12px;
+
+}
+
+.container-cart-products{
+    position: absolute;
+    top: 50px;
+    right: 0;
+
+    background-color: #fff;
+    width: 400px;
+    z-index: 1;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.20);
+    border-radius: 10px;
+}
+
+.cart-product{
+    display: flex;
+    justify-content: space-between;
+    padding: 30px;
+
+    border-bottom: 1px solid rgba(0, 0, 0, 0.20);
+}
+
+.info-cart-product{
+    display: flex;
+    justify-content: space-between;
+    flex: 0.8;
+
+}
+
+.titulo-producto-carrito{
+    font-size: 20px;
+}
+
+.precio-producto-carrito{
+    font-weight: 700;
+    font-size: 20px;
+    margin-left: 10px;
+
+}
+
+.cantidad-producto-carrito{
+    font-weight: 400;
+    font-size: 20px;
+
+}
+
+.icon-close{
+    width: 25px;
+    height: 25px;
+
+}
+
+.cart-total{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 0;
+    gap: 20px;
+
+}
+
+.cart-total h3{
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.total-pagar{
+    font-size: 20px;
+    font-weight: 900;
+}
+
+.icon-close:hover{
+    stroke: red;
+    cursor: pointer;
+}
+
 /* MAIN*/
 
 .container-items{
     display: grid;/*Damos un valor al display*/
     grid-template-columns: repeat(3, 1fr);/*aqui le damos un tamaño a la cuadricula de nuestros productos*/
-    gap: 20px;/*Ahora le damos una separacion a los productos para que se vean mejor y menos amontonados*/
+    gap: 10px;/*Ahora le damos una separacion a los productos para que se vean mejor y menos amontonados*/
 }
 /*Para que nuestros productos queden ordenados en cuadriculas y mejorar el diseño de nuestra pagina llamamos a la clase container-items*/
 
@@ -170,10 +276,11 @@ header{
 }/*Le damos formato al presio de nuestro producto*/
 
 .info-product button{
+    
     border: none;/*aqui quitamos los bordes*/
     background: none;
     background-color: black;/*esto es para que el recuadro sea negro*/
     color: #fff;/*resaltamos el texto dandole color blanco*/
-    padding: 15px 10px;/*le damos una separacion de 15 px izquierda derecha y 10px de arriba y abajo para centrar el texto del boton*/
+    padding: 12px 5px;/*le damos una separacion de 15 px izquierda derecha y 10px de arriba y abajo para centrar el texto del boton*/
     cursor: pointer;/*para que se vea mas estetico cambiamos el tipo de puntero a el de manita cuando este se encuentre sobre el boton*/
 }/*damos formato al boton de añadir al carrito*/
