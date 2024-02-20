@@ -1,5 +1,5 @@
 
-/* Estilos globales */
+/*--------------------------------------Estilos globales-----------------------------------------------------------------------------------------------------*/
 *::after,
 *::before,
 * {
@@ -13,27 +13,39 @@
 }
 
 body {
+    /*fondo de la pagina*/
+    background-image: url('imagenes/fondos-para-la-pagina/fondo-tienda.png');
+    background-size: cover; /* Para que la imagen cubra todo el fondo */
+    background-position: center; /* Para centrar la imagen en el fondo */
+    background-attachment: fixed; /* Fondo estático */
+    /*resto de elementos de la pagina*/
     margin: 0 auto;
     max-width: 1200px;
     font-family: 'Lato';
     color: #333;
-    background: #dfe9f5;
+    background-color: #000;
     margin-left: 90px; /* Ancho de la barra de navegación */
 }
-
+/*-------------------------------ESTILOS PARA EL MENU DESPLEGABLE-----------------------------------------------------------------------------------------*/
 nav {
+    border-radius: 15px;
     position: fixed;
     top: 0;
     left: 0;
     bottom: 0;
     height: 100%;
-    background: #fff;
     width: 90px;
+    background: #fff;
     transition: width 0.2s linear;
     box-shadow: 0 20px 700px rgba(0, 0, 0, 0.1);
     overflow-y: auto; /* Añadido para habilitar el desplazamiento si el contenido del menú es demasiado largo */
     z-index: 100; /* Valor alto para asegurarse de que el menú esté delante de otros elementos */
 
+}
+
+nav:hover {
+    width: 280px;
+    transition: all 0.5s ease;
 }
 
 .menu {
@@ -95,14 +107,8 @@ nav {
     stroke: #000;
 }
 
-/*.nav-item{
-    display: flex;
-    align-items: center;/*Alineacion vertical del texto del menu
-    justify-content: space-between;/*Alineacion horizontal del texto del menu
-}*/
-
 .icon{
-    display: flex;
+    display: inline-flex;
     align-items: center;
     margin-right: 10px; /* Agrega un margen entre el icono y el texto */
 }
@@ -124,7 +130,6 @@ nav {
 * {
     position: relative;
     color: rgb(0, 0, 0);
-    /*font-size: 14px;*/
     display: table;
     width: 300px;
     padding: 5px;
@@ -139,51 +144,7 @@ nav {
     text-align: center;
 }
 
-/*.nav-item {
-    position: relative;
-    margin-left: 40px;
-}*/
-
-nav:hover {
-    width: 280px;
-    transition: all 0.5s ease;
-}
-
-.logout {
-    position: absolute;
-    bottom: 0;
-}
-
-.container-title{
-    position: absolute;
-    top: auto;
-    right: auto;
-    align-items: center;
-    color: #000;
-    font-size: 40px;
-    
-}
-
-.icon-cart {
-    width: 75px;
-    height: 75px;
-    stroke: #000;
-    cursor: pointer;
-    /* Aquí es donde puedes ajustar las propiedades de posición */
-    position: fixed; /* O position: absolute; dependiendo de tu diseño */
-    top: 20px; /* Cambia este valor para ajustar la posición vertical */
-    right: 10px; /* Cambia este valor para ajustar la posición horizontal */
-}
-
-.icon-cart:hover {
-    cursor: pointer;
-}
-
-img {
-    max-width: 100%;
-}
-
-/* Estilos del encabezado */
+/*-----------------------------ESTILOS DEL ENCABEZADO DE LA PAGINA-----------------------------------------------*/
 header {
     display: flex;
     justify-content: space-between;
@@ -191,34 +152,41 @@ header {
     align-items: center;
 }
 
+.container-title{
+    position: absolute;
+    top: auto;
+    right: auto;
+    align-items: center;
+    font-size: 40px;
+    
+}
+
+.container-title h1{
+    color: white;
+}
+
+/*---------------------------------ESTILOS PARA EL CARRITO---------------------------------------------------------------------------------*/
+
 .container-icon {
     position: relative;
 }
 
-/* Estilo para el contenedor de productos del carrito */
-.container-cart-products {
-    position: fixed;
-    top: 21px; /* Coloca el carrito justo debajo del icono */
-    right: 15px;
-    width: 400px; /* Ajusta el ancho del carrito según sea necesario */
-    background-color: #fff; /* Cambia el color de fondo según tu diseño */
-    border-radius: 10px; /* Redondea las esquinas */
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.20); /* Añade sombra para resaltar */
-    display: none; /* Oculta el carrito por defecto */
-    z-index: 1; /* Asegura que esté por encima del contenido */
-}
-
-/* Estilo para mostrar el carrito cuando está abierto */
-.container-cart-products.open {
-    display: block;
+.icon-cart {
+    width: 75px;
+    height: 75px;
+    stroke: #ffffff;
+    cursor: pointer;
+    /* Aquí es donde puedes ajustar las propiedades de posición */
+    position: fixed; /* O position: absolute; dependiendo de tu diseño */
+    top: 100px; /* Cambia este valor para ajustar la posición vertical */
+    right: 25px; /* Cambia este valor para ajustar la posición horizontal */
 }
 
 .count-products {
     position: fixed;
-    top: 20px;
-    right: 10px;
-    background-color: #000;
-    color: #fff;
+    top: 100px;
+    right: 18px;
+    background-color: #f90000;
     width: 25px;
     height: 25px;
     display: flex;
@@ -228,21 +196,33 @@ header {
 }
 
 #contador-productos {
-    font-size: 12px;
+    font-size: 15px;
+    color: #fff;
 }
 
+/* Estilo para el contenedor de productos del carrito */
 .container-cart-products {
     position: fixed;
-    top: 87px;
-    right: 10px;
-    background-color: #fff;
-    width: 260px;
-    z-index: 1;
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.20);
-    border-radius: 10px;
+    top: 170px;/* Coloca el carrito justo debajo del icono */
+    right: 28px;
+    width: 260px;/* Ajusta el ancho del carrito según sea necesario */
+    background-color: #fff; /* Cambia el color de fondo según tu diseño */
+    border-radius: 10px; /* Redondea las esquinas */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.20); /* Añade sombra para resaltar */
+    display: none; /* Oculta el carrito por defecto */
+    z-index: 1; /* Asegura que esté por encima del contenido */
 }
 
-/* Estilo para los productos en el carrito */
+.icon-cart:hover {
+    cursor: pointer;
+}
+
+/* Estilo para mostrar el carrito cuando está abierto */
+.container-cart-products.open {
+    display: block;
+}
+
+/*--------------------------Estilo para los productos en el carrito--------------------------------------------------------------------------------*/
 .cart-product {
     display: flex;
     justify-content: space-between;
@@ -256,6 +236,11 @@ header {
     flex-direction: column;
 }
 
+.cantidad-producto-carrito {
+    
+    font-size: 20px;
+}
+
 .titulo-producto-carrito {
     font-size: 12px;
     font-weight: 850;
@@ -266,12 +251,7 @@ header {
     font-size: 16px;
 }
 
-.cantidad-producto-carrito {
-    
-    font-size: 20px;
-}
-
-.icon-close {
+.icon-delete {
     width: 25px;
     height: 25px;
     cursor: pointer;
@@ -295,10 +275,16 @@ header {
 }
 
 .icon-close:hover {
-    stroke: red;
+    stroke: rgb(0, 0, 0);
 }
 
-/* Estilos del contenido principal */
+/*-------------------------ESTILOS DE LOS PRODUCTOS------------------------------------------------------------------------------------*/
+
+/*sombra para resaltar los productos*/
+.item:hover {
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.65);
+}
+
 .container-items {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -311,8 +297,8 @@ header {
     border-radius: 10px;
 }
 
-.item:hover {
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.20);
+img {
+    max-width: 100%;
 }
 
 .item img {
@@ -332,17 +318,25 @@ header {
 }
 
 .info-product {
+    align-items: center;
     padding: 15px 30px;
-    line-height: 2;
+    line-height: 1;
     display: flex;
     flex-direction: column;
-    gap: 10px;
+    gap: 5px;
+}
+
+/*color del texto del nombre del producto*/
+.info-product h2{
+    color: #ffffff;
 }
 
 .price {
+    color: #ffffff;
     font-size: 18px;
     font-weight: 900px;
 }
+
 
 .info-product button {
     border: none;
