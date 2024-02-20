@@ -1,12 +1,8 @@
-/*     Import google fonts  */
 
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
-
-/*  GLOBAL styles   */
-
+/* Estilos globales */
 *::after,
-*::before,/*para reiniciar los estilos*/
-*{
+*::before,
+* {
     margin: 0;
     padding: 0;
     outline: none;
@@ -14,62 +10,127 @@
     text-decoration: none;
     box-sizing: border-box;
     font-family: "Poppins", sans-serif;
-
 }
 
-body{
-    margin: 0 auto;/*Con esto le decimos que centre nuestros items y texto*/
-    max-width: 1200px;/*Le decimos que utilice un estilo de 1200 pixeles*/
-    font-family: 'Lato';/*Con esto cambiamos el estilo de fuente*/
-    color:#333;/*le ponemos un color predeterminado al body*/
-    background: #dfe9f5;/*para el menu desplegable*/
-
+body {
+    margin: 0 auto;
+    max-width: 1200px;
+    font-family: 'Lato';
+    color: #333;
+    background: #dfe9f5;
+    margin-left: 90px; /* Ancho de la barra de navegación */
 }
-nav{
-    position: absolute;
+
+nav {
+    position: fixed;
     top: 0;
+    left: 0;
     bottom: 0;
     height: 100%;
-    left: 0;
     background: #fff;
     width: 90px;
-    overflow: hidden;
     transition: width 0.2s linear;
-    box-shadow: 0 20px 35px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 20px 700px rgba(0, 0, 0, 0.1);
+    overflow-y: auto; /* Añadido para habilitar el desplazamiento si el contenido del menú es demasiado largo */
+    z-index: 100; /* Valor alto para asegurarse de que el menú esté delante de otros elementos */
 
-}/*para el menu desplegable*/
+}
 
-.menu-icon{
+.menu {
     text-align: center;
     display: flex;
+    flex-direction: column;
     transition: all 0.5s ease;
-    margin: 10px 0 0 10px;
-    
+    margin: 5px 1px 1px 5px;
+    width: 80px;
 }
 
-.menu-icon{
-    width: 40px;/*alto*/
-    height: 40px;/*ancho*/
-    border-radius: 50%;
-}/*le damos tamaño proporcionado con esto a nuestro icono para opciones*/
+.home-icon{
+    position: absolute;
+    margin: 1px 1px 1px 0px;
+    width: 40px;
+    height: 40px;
+    stroke: #000;
+}
+.net-icon{
+    position: absolute;
+    margin: 1px 1px 1px 0px;
+    width: 40px;
+    height: 40px;
+    stroke: #000;
+}
+.info-icon{
+    position: absolute;
+    margin: 1px 1px 1px 0px;
+    width: 40px;
+    height: 40px;
+    stroke: #000;
+}
+.shop-icon{
+    position: absolute;
+    margin: 1px 1px 1px 0px;
+    width: 40px;
+    height: 40px;
+    stroke: #000;
+}
+.wallet-icon{
+    position: absolute;
+    margin: 1px 1px 1px 0px;
+    width: 40px;
+    height: 40px;
+    stroke: #000;
+}
+.profile-icon{
+    position: absolute;
+    margin: 1px 1px 1px 0px;
+    width: 40px;
+    height: 40px;
+    stroke: #000;
+}
+.logout-icon{
+    position: absolute;
+    margin: 1px 1px 1px 0px;
+    width: 40px;
+    height: 40px;
+    stroke: #000;
+}
 
-.icon span{
+/*.nav-item{
+    display: flex;
+    align-items: center;/*Alineacion vertical del texto del menu
+    justify-content: space-between;/*Alineacion horizontal del texto del menu
+}*/
+
+.icon{
+    display: flex;
+    align-items: center;
+    margin-right: 10px; /* Agrega un margen entre el icono y el texto */
+}
+
+.icon svg {
+    width: 40px;
+    height: 40px;
+    stroke: #000;
+    margin-right: 5px; /* Agrega un margen entre el icono y el texto */
+}
+
+.icon span {
     font-weight: bold;
-    padding-left: 15px;
+    /*padding-left: 15px;*/
     font-size: 18px;
     text-transform: uppercase;
-
 }
-*{
+
+* {
     position: relative;
-    color: rgb(85, 83, 83);
-    font-size: 14px;
+    color: rgb(0, 0, 0);
+    /*font-size: 14px;*/
     display: table;
     width: 300px;
-    padding: 10px;
+    padding: 5px;
 }
 
-.fas{
+.fas {
     position: relative;
     width: 70px;
     height: 40px;
@@ -78,209 +139,215 @@ nav{
     text-align: center;
 }
 
-.nav-item{
+/*.nav-item {
     position: relative;
-    top: 12px;
-    margin-left: 18px;
+    margin-left: 40px;
+}*/
 
-}
-
-@:hover{
-    background: #eee;
-
-}
-
-nav:hover{
+nav:hover {
     width: 280px;
     transition: all 0.5s ease;
 }
 
-.logout{
+.logout {
     position: absolute;
     bottom: 0;
 }
 
-.icon-cart{
-    width: 40px;/*Altura*/
-    height: 40px;/*Ancho*/
-    /*aqui le estamos dando un tamaño mas pequeño a nuestro icono de bolsa para que este tenga simetria con el texto y nuestra pagina*/
-    stroke: #000;
-
+.container-title{
+    position: absolute;
+    top: auto;
+    right: auto;
+    align-items: center;
+    color: #000;
+    font-size: 40px;
+    
 }
-/*Para darle un tamaño a nuestro icono del carrito o de la bolsa de compras utilizamos esta funcion*/
 
-.icon-cart:hover{
+.icon-cart {
+    width: 75px;
+    height: 75px;
+    stroke: #000;
+    cursor: pointer;
+    /* Aquí es donde puedes ajustar las propiedades de posición */
+    position: fixed; /* O position: absolute; dependiendo de tu diseño */
+    top: 20px; /* Cambia este valor para ajustar la posición vertical */
+    right: 10px; /* Cambia este valor para ajustar la posición horizontal */
+}
+
+.icon-cart:hover {
     cursor: pointer;
 }
 
-img{
+img {
     max-width: 100%;
-}/*con esto ahora vamos a decirle todas las imagenes tengan un tamaño maximo de 100% para evitar desbordes*/
-
-/*HEADER Styles*/
-
-header{
-    display: flex;
-    justify-content: space-between;
-    /*de esta manera separamos los items de nuestros productos y su informacion del texto tienda y nuestro icono de carrito*/
-    padding: 30px 0 40px 0;
-    /*para que nuestros atributos no esten tan pegados bamos a darle una separacion de 30 pixeles de la parte de arriba y 4 de la parte de abajo*/
-
 }
 
-.container-icon{
+/* Estilos del encabezado */
+header {
+    display: flex;
+    justify-content: space-between;
+    padding: 30px 0 40px 0;
+    align-items: center;
+}
+
+.container-icon {
     position: relative;
 }
 
-.count-products{
-    position: absolute;
-    top: 55%;
-    right: 0;
-    
+/* Estilo para el contenedor de productos del carrito */
+.container-cart-products {
+    position: fixed;
+    top: 21px; /* Coloca el carrito justo debajo del icono */
+    right: 15px;
+    width: 400px; /* Ajusta el ancho del carrito según sea necesario */
+    background-color: #fff; /* Cambia el color de fondo según tu diseño */
+    border-radius: 10px; /* Redondea las esquinas */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.20); /* Añade sombra para resaltar */
+    display: none; /* Oculta el carrito por defecto */
+    z-index: 1; /* Asegura que esté por encima del contenido */
+}
+
+/* Estilo para mostrar el carrito cuando está abierto */
+.container-cart-products.open {
+    display: block;
+}
+
+.count-products {
+    position: fixed;
+    top: 20px;
+    right: 10px;
     background-color: #000;
     color: #fff;
     width: 25px;
     height: 25px;
-
     display: flex;
     justify-content: center;
     align-items: center;
     border-radius: 50%;
-
 }
 
-#contador-productos{
+#contador-productos {
     font-size: 12px;
-
 }
 
-.container-cart-products{
-    position: absolute;
-    top: 50px;
-    right: 0;
-
+.container-cart-products {
+    position: fixed;
+    top: 87px;
+    right: 10px;
     background-color: #fff;
-    width: 400px;
+    width: 260px;
     z-index: 1;
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.20);
     border-radius: 10px;
 }
 
-.cart-product{
+/* Estilo para los productos en el carrito */
+.cart-product {
     display: flex;
     justify-content: space-between;
-    padding: 30px;
-
+    align-items: center;
+    padding: 20px;
     border-bottom: 1px solid rgba(0, 0, 0, 0.20);
 }
 
-.info-cart-product{
+.info-cart-product {
     display: flex;
-    justify-content: space-between;
-    flex: 0.8;
+    flex-direction: column;
+}
+
+.titulo-producto-carrito {
+    font-size: 12px;
+    font-weight: 850;
 
 }
 
-.titulo-producto-carrito{
+.precio-producto-carrito {
+    font-size: 16px;
+}
+
+.cantidad-producto-carrito {
+    
     font-size: 20px;
 }
 
-.precio-producto-carrito{
-    font-weight: 700;
-    font-size: 20px;
-    margin-left: 10px;
-
-}
-
-.cantidad-producto-carrito{
-    font-weight: 400;
-    font-size: 20px;
-
-}
-
-.icon-close{
+.icon-close {
     width: 25px;
     height: 25px;
-
-}
-
-.cart-total{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 20px 0;
-    gap: 20px;
-
-}
-
-.cart-total h3{
-    font-size: 20px;
-    font-weight: 700;
-}
-
-.total-pagar{
-    font-size: 20px;
-    font-weight: 900;
-}
-
-.icon-close:hover{
-    stroke: red;
     cursor: pointer;
 }
 
-/* MAIN*/
-
-.container-items{
-    display: grid;/*Damos un valor al display*/
-    grid-template-columns: repeat(3, 1fr);/*aqui le damos un tamaño a la cuadricula de nuestros productos*/
-    gap: 10px;/*Ahora le damos una separacion a los productos para que se vean mejor y menos amontonados*/
+.cart-total {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
 }
-/*Para que nuestros productos queden ordenados en cuadriculas y mejorar el diseño de nuestra pagina llamamos a la clase container-items*/
 
-.item{
-    border-radius: 10px;/*le damos un limite para el borde de nuestra imagen de producto*/
-}/*llamamos a nuestra clase item para darle algo mas de diseño*/
+.cart-total h3 {
+    font-size: 18px;
+    font-weight: bold;
+}
 
-.item:hover{
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.20);/*hacemos uso de la funcionn "box-shadow" para dar sombra a nuestros elemtos*/
-}/*volvemos a llamar a nuestra clase item para poder darle sombra a nuestras imagenes de producto*/
+.total-pagar {
+    font-size: 18px;
+    font-weight: bold;
+}
 
-.item img{
-    width: 100%;/*con esto ponemos que tenga un ancho del 100%*/
-    height: 300px;/*con esto decimos que tendra una altura de 300 px*/
-    object-fit: cover;/*para que no se deforme nuestra imagen al modificar los tamaños originales usamos esta funcion*/
-    border-radius: 10px 10px 0 0;/*para que resalte mas el producto que estamos eñalando con el mouse usaremos esta funcion la cual dara una sombra interactiva a nuestros productos*/
-    transition: all .5s;/*para que el zoom que se hara a la imagen no sea brusco si no mas fluido usamos esta funcion de transition y dandole un valor en segundo en este caso .5s (segundos)*/
-}/*con esto vamos a proporcionar nuestras imagenes todas iguales*/
+.icon-close:hover {
+    stroke: red;
+}
 
-.item figure{
-    overflow: hidden;/*mantiene la imagen dentro del borde de nuestro contenedor*/
-}/*evita que al hacer zoom cuando hacermamos el mouse a la imagen esta no pierda el tamaño original del borde que le dimos al principio*/
+/* Estilos del contenido principal */
+.container-items {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    margin-left: 90px; /* Ancho del nav */
+    padding-top: 50px; /* Espacio para compensar la altura del nav */
+}
 
-.item:hover img{
-    transform: scale(1.2);/*con esto le damos la escala que queremos que aumente al acercar el mouse*/
-}/*animacion de zoom al señalar un producto*/
+.item {
+    border-radius: 10px;
+}
 
-.info-product{
-    padding: 15px 30px;/*le damos una pequeña separacion a los items para un mejor orden y posterior mente hacer que todos sean del mismo tamaño con 15px de arriba y abajo y 30 de izquierda y derecha*/
-    line-height: 2;/*asi le damos un interlineado a nuestro texto de informacion del producto*/
+.item:hover {
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.20);
+}
+
+.item img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 10px 10px 0 0;
+    transition: all .5s;
+}
+
+.item figure {
+    overflow: hidden;
+}
+
+.item:hover img {
+    transform: scale(1.2);
+}
+
+.info-product {
+    padding: 15px 30px;
+    line-height: 2;
     display: flex;
     flex-direction: column;
     gap: 10px;
-
 }
 
-.price{
+.price {
     font-size: 18px;
     font-weight: 900px;
-}/*Le damos formato al presio de nuestro producto*/
+}
 
-.info-product button{
-    
-    border: none;/*aqui quitamos los bordes*/
-    background: none;
-    background-color: black;/*esto es para que el recuadro sea negro*/
-    color: #fff;/*resaltamos el texto dandole color blanco*/
-    padding: 12px 5px;/*le damos una separacion de 15 px izquierda derecha y 10px de arriba y abajo para centrar el texto del boton*/
-    cursor: pointer;/*para que se vea mas estetico cambiamos el tipo de puntero a el de manita cuando este se encuentre sobre el boton*/
-}/*damos formato al boton de añadir al carrito*/
+.info-product button {
+    border: none;
+    background: black;
+    color: #fff;
+    padding: 12px 5px;
+    cursor: pointer;
+}
