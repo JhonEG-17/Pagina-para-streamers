@@ -114,28 +114,35 @@
             </div>
 
             <div class="container-cart-products hidden-cart">
-                <div class="cart-product">
-                    <div class="info-cart-product">
-                        <span class="cantidad-producto-carrito">
-                            1
-                        </span>
-                            <p class="titulo-producto-carrito">
-                                Playera Negra
-                            </p>
-                        <span class="precio-producto-carrito">
-                            $28
-                        </span>
-                    </div>
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="icon-delete">
-                        <path stroke-linecap="round" stroke-linejoin="round" d="m9.75 9.75 4.5 4.5m0-4.5-4.5 4.5M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
-                    </svg>
-                      
+                <div class="cart-empty hidden">
+                    <p>El carrito esta vacio</p>
                 </div>
-                <div class="cart-total">
+                <div class="row-product hidden">
+                    <div class="cart-product">
+                        <div class="info-cart-product">
+                            <span class="cantidad-producto-carrito">1</span>
+                            <p class="titulo-producto-carrito">Playera Negra</p>
+                            <span class="precio-producto-carrito">$28</span>
+                        </div>
+                        <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            fill="none"
+                            viewBox="0 0 24 24"
+                            stroke-width="1.5"
+                            stroke="currentColor"
+                            class="icon-close"
+                        >
+                            <path
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                d="M6 18L18 6M6 6l12 12"
+                            />
+                        </svg>
+                    </div>
+                </div>    
+                <div class="cart-total hidden">
                     <h3>Total:</h3>
-                    <span class="total-pagar">
-                        $200
-                    </span>
+                    <span class="total-pagar">$200</span>
                 </div>
             </div>
         </div>    
@@ -156,7 +163,7 @@
             <div class="info-product">
                 <h2>Playera negra</h2><!--Utilizamos un h2 para colocar un segundo titulo donde pondremos en nombre del producto-->
                 <p class="price">$28</p><!--Utilizamos un p de tipo class para colocar el precio de nuestro producto -->
-                <button>Añadir al carrito</button><!--Por ultimo añadimos un boton con texto dentro haciendo uso de la funcion "button"-->
+                <button class="add-to-cart" data-id="1">Añadir al carrito</button><!--Por ultimo añadimos un boton con texto dentro haciendo uso de la funcion "button"-->
 
             </div>
             <!--Creamos una clase para colocar la informacion de nuestro producto-->
@@ -172,7 +179,7 @@
             <div class="info-product">
                 <h2>Playera gris</h2>
                 <p class="price">$28</p>
-                <button>Añadir al carrito</button>
+                <button class="add-to-cart" data-id="2">Añadir al carrito</button>
 
             </div>
         </div>
@@ -187,7 +194,7 @@
             <div class="info-product">
                 <h2>Playera blanca</h2>
                 <p class="price">$28</p>
-                <button>Añadir al carrito</button>
+                <button class="add-to-cart" data-id="3">Añadir al carrito</button>
 
             </div>
         </div>
@@ -202,7 +209,7 @@
             <div class="info-product">
                 <h2>Playera azul</h2>
                 <p class="price">$28</p>
-                <button>Añadir al carrito</button>
+                <button class="add-to-cart" data-id="4">Añadir al carrito</button>
 
             </div>
         </div>
@@ -217,7 +224,7 @@
             <div class="info-product">
                 <h2>Playera roja</h2>
                 <p class="price">$28</p>
-                <button>Añadir al carrito</button>
+                <button class="add-to-cart" data-id="5">Añadir al carrito</button>
 
             </div>
         </div>
@@ -232,7 +239,7 @@
             <div class="info-product">
                 <h2>Playera morada</h2>
                 <p class="price">$28</p>
-                <button>Añadir al carrito</button>
+                <button class="add-to-cart" data-id="6">Añadir al carrito</button>
 
             </div>
         </div>
@@ -247,7 +254,7 @@
             <div class="info-product">
                 <h2>Playera verde</h2>
                 <p class="price">$28</p>
-                <button>Añadir al carrito</button>
+                <button class="add-to-cart" data-id="7">Añadir al carrito</button>
 
             </div>
         </div>

@@ -11,7 +11,6 @@
     box-sizing: border-box;
     font-family: "Poppins", sans-serif;
 }
-
 body {
     /*fondo de la pagina*/
     background-image: url('imagenes/fondos-para-la-pagina/fondo-tienda.png');
@@ -26,7 +25,11 @@ body {
     background-color: #000;
     margin-left: 90px; /* Ancho de la barra de navegación */
 }
-/*-------------------------------ESTILOS PARA EL MENU DESPLEGABLE-----------------------------------------------------------------------------------------*/
+
+/*-----------------------------PERTENECE A LOS ESTILOS DE LA TIENDA------------------------------------------------------------------------------------------------*/
+
+
+/*--------------------------------ESTILOS PARA EL MENU DESPLEGABLE-----------------------------------------------------------------------------------------*/
 nav {
     border-radius: 15px;
     position: fixed;
@@ -48,7 +51,7 @@ nav:hover {
     transition: all 0.5s ease;
 }
 
-.menu {
+.menu {/*MENU DESPLEGABLE*/
     text-align: center;
     display: flex;
     flex-direction: column;
@@ -57,49 +60,49 @@ nav:hover {
     width: 80px;
 }
 
-.home-icon{
+.home-icon{/*ICONO DE INICIO*/
     position: absolute;
     margin: 1px 1px 1px 0px;
     width: 40px;
     height: 40px;
     stroke: #000;
 }
-.net-icon{
+.net-icon{/*ICONO DE REDES*/
     position: absolute;
     margin: 1px 1px 1px 0px;
     width: 40px;
     height: 40px;
     stroke: #000;
 }
-.info-icon{
+.info-icon{/*ICONO DE INFORMACION*/
     position: absolute;
     margin: 1px 1px 1px 0px;
     width: 40px;
     height: 40px;
     stroke: #000;
 }
-.shop-icon{
+.shop-icon{/*ICONO DE TIENDA*/
     position: absolute;
     margin: 1px 1px 1px 0px;
     width: 40px;
     height: 40px;
     stroke: #000;
 }
-.wallet-icon{
+.wallet-icon{/*ICONO DE CARTERA*/
     position: absolute;
     margin: 1px 1px 1px 0px;
     width: 40px;
     height: 40px;
     stroke: #000;
 }
-.profile-icon{
+.profile-icon{/*ICONO DE PERFIL*/
     position: absolute;
     margin: 1px 1px 1px 0px;
     width: 40px;
     height: 40px;
     stroke: #000;
 }
-.logout-icon{
+.logout-icon{/*ICONO DE CERRAR SECION*/
     position: absolute;
     margin: 1px 1px 1px 0px;
     width: 40px;
@@ -204,13 +207,15 @@ header {
 .container-cart-products {
     position: fixed;
     top: 170px;/* Coloca el carrito justo debajo del icono */
-    right: 28px;
+    right: 28px;/*Desplaza el contador de derecha a izquierda*/
     width: 260px;/* Ajusta el ancho del carrito según sea necesario */
     background-color: #fff; /* Cambia el color de fondo según tu diseño */
     border-radius: 10px; /* Redondea las esquinas */
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.20); /* Añade sombra para resaltar */
     display: none; /* Oculta el carrito por defecto */
     z-index: 1; /* Asegura que esté por encima del contenido */
+    overflow-y: auto; /* Habilitar desplazamiento vertical */
+    max-height: calc(100vh - 200px); /* Establecer una altura máxima para el desplazamiento */
 }
 
 .icon-cart:hover {
