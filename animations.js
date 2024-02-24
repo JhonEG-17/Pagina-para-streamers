@@ -72,25 +72,36 @@ document.addEventListener("DOMContentLoaded", function() {
     });
 
     // Función para mostrar HTML
+    // define una función llamada showHTML, que se encarga de mostrar los elementos HTML relacionados con los productos en el carrito.
     const showHTML = () => {
-        if (!allProducts.length) {
+        
+        //Aquí se realiza una verificación para determinar si el arreglo allProducts está vacío. Si está vacío, se muestra el mensaje "El carrito está vacío" y se oculta la sección que muestra los productos. Si el arreglo contiene elementos, se oculta el mensaje y se muestra la sección de productos.
+        if (allProducts.length === 0) {
+
             cartEmpty.classList.remove('hidden');
             rowProduct.classList.add('hidden');
         } else {
+            
             cartEmpty.classList.add('hidden');
             rowProduct.classList.remove('hidden');
         }
 
         // Limpiar HTML
+        //Este código borra el contenido anterior dentro del contenedor de productos del carrito para evitar duplicados al volver a agregar productos.
         rowProduct.innerHTML = '';
-
+        
+        //Estas variables se utilizan para calcular el total del precio de todos los productos en el carrito y la cantidad total de productos en el carrito, respectivamente.
         let total = 0;
         let totalOfProducts = 0;
 
+        //Este es un bucle forEach que recorre todos los productos en el arreglo allProducts.
         allProducts.forEach(product => {
+
+            //Aquí se crea un nuevo elemento div para cada producto en el carrito y se le asigna la clase cart-product.
             const containerProduct = document.createElement('div');
             containerProduct.classList.add('cart-product');
 
+            // Se omite el contenido del contenedor del producto para mantener la brevedad.
             containerProduct.innerHTML = `
                 <div class="info-cart-product">
                     <span class="cantidad-producto-carrito">${product.quantity}</span>
@@ -113,12 +124,15 @@ document.addEventListener("DOMContentLoaded", function() {
                 </svg>
             `;
 
+            //agrega el contenedor del producto recién creado al contenedor principal de productos del carrito.
             rowProduct.append(containerProduct);
 
+            //Aquí se actualizan las variables total y totalOfProducts sumando el precio total de cada producto y la cantidad total de productos, respectivamente.
             total += parseInt(product.quantity * product.price.slice(1));
             totalOfProducts += product.quantity;
         });
 
+        //se actualiza el texto que muestra el total del precio de todos los productos y la cantidad total de productos en el carrito.
         valorTotal.innerText = `$${total}`;
         countProducts.innerText = totalOfProducts;
     };
