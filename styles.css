@@ -23,93 +23,11 @@ body {
     margin: 0 auto;
     max-width: 1200px;
     font-family: 'Lato';
-    color: #ffffff;
+    color: white;
     background-color: #000;
     margin-left: 70px; /* Ancho de la barra de navegación */
+
 }
-/*-----------------------------PERTENECE A LOS ESTILOS DEL INICIO----------------------------------------------------------------------------------------------------*/
-
-.container-subtitle h2{
-    white-space: nowrap;
-    color: #ffffff;
-}
-.container-subtitle b{
-    white-space: nowrap;
-    color: white;
-}
-.container-text p{
-    white-space: nowrap;
-    color: white;
-}
-
-/*---------------------------Corresponde a los estilos del bloque de left 4 dead 2----------------------------------------------------------------------------------*/
-.container-title-l4d2 h2{
-    white-space: nowrap;
-    color: white;
-    display: flex;
-    align-items: center;
-    font-size: 45px;
-    padding: 15px;
-}
-
-.container-l4d2{
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);/*aqui se ajusta la cantidad de productos que se colocan por fila*/
-    gap: 20px;/*espacio entre los productos*/
-    grid-row-gap: 20px;/*espacio entre filas*/
-    margin-left: 1px; /* Ancho espacio entre el nav y los productos*/
-    padding-top: 50px; /* Espacio para compensar la altura del nav */
-}
-
-/*---------------------------Corresponde a los estilos del bloque de resident evil ----------------------------------------------------------------------------------*/
-
-.container-title-re h2{
-    white-space: nowrap;
-    color: white;
-    display: flex;
-    align-items: center;
-    font-size: 45px;
-    padding: 15px;
-}
-
-.container-re{
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);/*aqui se ajusta la cantidad de productos que se colocan por fila*/
-    gap: 20px;/*espacio entre los productos*/
-    grid-row-gap: 20px;/*espacio entre filas*/
-    margin-left: 1px; /* Ancho espacio entre el nav y los productos*/
-    padding-top: 50px; /* Espacio para compensar la altura del nav */
-}
-
-/*---------------------------Corresponde a los estilos del bloque de gta san andreas----------------------------------------------------------------------------------*/
-
-.container-title-gtasa h2{
-    white-space: nowrap;
-    color: white;
-    display: flex;
-    align-items: center;
-    font-size: 45px;
-    padding: 15px;
-}
-.container-gtasa{
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);/*aqui se ajusta la cantidad de productos que se colocan por fila*/
-    gap: 20px;/*espacio entre los productos*/
-    grid-row-gap: 20px;/*espacio entre filas*/
-    margin-left: 1px; /* Ancho espacio entre el nav y los productos*/
-    padding-top: 50px; /* Espacio para compensar la altura del nav */
-}
-
-
-
-
-
-
-
-
-/*-----------------------------PERTENECE A LOS ESTILOS DE LA TIENDA------------------------------------------------------------------------------------------------*/
-
-
 /*--------------------------------ESTILOS PARA EL MENU DESPLEGABLE-----------------------------------------------------------------------------------------*/
 nav {
     border-radius: 15px;
@@ -119,7 +37,7 @@ nav {
     bottom: 0;
     height: 95%;
     width: 90px;
-    background: #fff;
+    background: white;
     transition: width 0.2s linear;
     box-shadow: 0 20px 700px rgba(0, 0, 0, 0.1);
     overflow-y: auto; /* Añadido para habilitar el desplazamiento si el contenido del menú es demasiado largo */
@@ -198,12 +116,6 @@ nav:hover {
     margin-right: 10px; /* Agrega un margen entre el icono y el texto */
 }
 
-.icon svg {
-    width: 40px;
-    height: 40px;
-    stroke: #000;
-    margin-right: 5px; /* Agrega un margen entre el icono y el texto */
-}
 
 .icon span {
     font-weight: bold;
@@ -237,17 +149,249 @@ header {
     padding: 20px 40px;/*ajusta el relleno segun sea necesario*/
 }
 
+main{
+    padding: 20px 40px;/*ajusta el releno segun sea necesario*/
+
+}
+
 .container-title{
+    white-space: nowrap;
     display: flex;
     align-items: center;
     font-size: 45px;
-    padding: 15px;
+    padding: 10px;
     z-index: 1; /*asegura que no se quedara por debajode ningun otro elemento de la pagina*/
 }
 
 h1{
+    color: rgb(255, 255, 255);
+}
+
+
+
+
+
+
+
+/*-----------------------------PERTENECE A LOS ESTILOS DEL INICIO----------------------------------------------------------------------------------------------------*/
+
+.container-subtitle h2{
+    white-space: nowrap;
     color: white;
 }
+.container-subtitle b{
+    white-space: nowrap;
+    color: white;
+}
+.container-text p{
+    white-space: nowrap;
+    color: white;
+}
+
+/*---------------------------Corresponde a los estilosde twitch-----------------------------------------------------------------------------------------------------*/
+
+.container-title-twitch h2{
+    white-space: nowrap;
+    color: white;
+    display: flex;
+    align-items: center;
+    font-size: 45px;
+    padding: 15px;
+}
+.container-twitch-videos{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);/*aqui se ajusta la cantidad de productos que se colocan por fila*/
+    gap: 20px;/*espacio entre los productos*/
+    grid-row-gap: 20px;/*espacio entre filas*/
+    margin-left: 1px; /* Ancho espacio entre el nav y los productos*/
+    padding-top: 50px; /* Espacio para compensar la altura del nav */
+}
+/*---------------------------Corresponde a los estilos del bloque de left 4 dead 2----------------------------------------------------------------------------------*/
+.container-title-l4d2 h2{
+    white-space: nowrap;
+    color: white;
+    display: flex;
+    align-items: center;
+    font-size: 45px;
+    padding: 15px;
+}
+
+.container-l4d2{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);/*aqui se ajusta la cantidad de productos que se colocan por fila*/
+    gap: 20px;/*espacio entre los productos*/
+    grid-row-gap: 20px;/*espacio entre filas*/
+    margin-left: 1px; /* Ancho espacio entre el nav y los productos*/
+    padding-top: 50px; /* Espacio para compensar la altura del nav */
+}
+
+/*---------------------------Corresponde a los estilos del bloque de resident evil ----------------------------------------------------------------------------------*/
+
+.container-title-re h2{
+    white-space: nowrap;
+    color: white;
+    display: flex;
+    align-items: center;
+    font-size: 45px;
+    padding: 15px;
+}
+
+.container-re{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);/*aqui se ajusta la cantidad de productos que se colocan por fila*/
+    gap: 20px;/*espacio entre los productos*/
+    grid-row-gap: 20px;/*espacio entre filas*/
+    margin-left: 1px; /* Ancho espacio entre el nav y los productos*/
+    padding-top: 50px; /* Espacio para compensar la altura del nav */
+}
+
+/*---------------------------Corresponde a los estilos del bloque de gta san andreas----------------------------------------------------------------------------------*/
+
+.container-title-gtasa h2{
+    white-space: nowrap;
+    color: white;
+    display: flex;
+    align-items: center;
+    font-size: 45px;
+    padding: 15px;
+}
+.container-gtasa{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);/*aqui se ajusta la cantidad de productos que se colocan por fila*/
+    gap: 20px;/*espacio entre los productos*/
+    grid-row-gap: 20px;/*espacio entre filas*/
+    margin-left: 1px; /* Ancho espacio entre el nav y los productos*/
+    padding-top: 50px; /* Espacio para compensar la altura del nav */
+}
+
+
+
+
+
+
+
+/*-----------------------------PERTENECE A LOS ESTILOS DE REDES SOCIALES------------------------------------------------------------------------------------------------*/
+
+
+
+
+
+
+
+/* Estilos para centrar horizontalmente el cuerpo solo en redes.html */
+
+.container-title-redes h2{
+    white-space: nowrap;
+    color: white;
+    display: flex;
+    align-items: center;
+    font-size: 45px;
+    padding: 15px;
+}
+
+  
+/* Estilos para la página de redes sociales */
+.container-enlaces {
+    display: flex;
+    flex-wrap: wrap; /* Permite que los elementos se envuelvan en filas */
+    justify-content: space-around; /* Distribuir el espacio alrededor de los elementos */
+    margin: 10px; /* Espaciado entre los elementos */
+    
+}
+  
+.container-enlaces a {
+
+    width: calc(33.33% - 20px); /* Establece el ancho de cada enlace */
+    margin: 10px; /* Espaciado entre los enlaces */
+    max-width: 150px; /* Cambia este valor al tamaño deseado en píxeles */
+    text-align: center; /* Centra el contenido horizontalmente */
+    box-sizing: border-box; /* Incluir bordes y relleno en el ancho y alto total */
+    padding: 10px; /* Añadir un relleno para separar visualmente el contenido */
+
+}
+
+.container-enlaces a img{
+    max-width: 150px;
+    height: auto;
+}
+  
+.container-enlaces a:nth-child(1) img {
+    filter: drop-shadow(5px 5px 5px rgba(59, 89, 152, 0.8)); /* Sombra azul para Facebook */
+}
+  
+.container-enlaces a:nth-child(2) img {
+    filter: drop-shadow(5px 5px 5px rgba(219, 72, 129, 0.8)); /* Sombra rosa-morada para Instagram */
+}
+
+.container-enlaces a:nth-child(3) img {
+    filter: drop-shadow(5px 5px 5px rgba(255, 0, 0, 0.8)); /* Sombra roja para youtube */
+}
+
+.container-enlaces a:nth-child(4) img {
+    filter: drop-shadow(5px 5px 5px rgba(187, 0, 255, 0.8)); /* Sombra morada para twitch */
+}
+
+.container-enlaces a:nth-child(5) img {
+    filter: drop-shadow(5px 5px 5px rgba(63, 133, 255, 0.8)); /* Sombra azul para tiktok */
+}
+
+.container-enlaces a:nth-child(6) img {
+    filter: drop-shadow(5px 5px 5px rgba(255, 255, 255, 0.8)); /* Sombra blanca para x */
+}
+
+.container-enlaces a:nth-child(7) img {
+    filter: drop-shadow(5px 5px 5px rgba(83, 67, 255, 0.8)); /* Sombra morada-azul para discord */
+    /*max-width: 100%;*/
+}
+
+
+
+
+
+/*-----------------------------PERTENECE A LOS ESTILOS DE SOBRE MI-------------------------------------------------------------------------------------------------*/
+
+
+
+
+
+
+
+
+.container-date{
+    grid-template-columns: repeat(2, 1fr);/*aqui se ajusta la cantidad de productos que se colocan por fila*/
+    white-space: nowrap;/*para que no de saltos de linea donde no debe haber*/
+    color: white;
+    display: grid;
+    align-items: center;
+    margin-left: 10px;
+    padding-top: 20px;
+}
+
+.container-date b{
+    grid-template-columns: repeat(2, 1fr);/*aqui se ajusta la cantidad de productos que se colocan por fila*/
+    white-space: nowrap;/*para que no de saltos de linea donde no debe haber*/
+    color: white;
+    display: grid;
+    align-items: center;
+    padding-top: 20px;
+}
+
+.container-bio{
+    white-space: nowrap;
+    color: white;
+    display: grid;
+    margin-left: 10px;
+    padding-top: 50px;
+}
+
+
+
+
+
+
+
+/*-----------------------------PERTENECE A LOS ESTILOS DE LA TIENDA------------------------------------------------------------------------------------------------*/
+
 
 /*---------------------------------ESTILOS PARA EL CARRITO---------------------------------------------------------------------------------*/
 
@@ -259,7 +403,7 @@ h1{
     z-index: 999; /*asegura que no se quedara por debajode ningun otro elemento de la pagina*/
     width: 75px;
     height: 75px;
-    stroke: #ffffff;
+    stroke: white;
     cursor: pointer;
     /* Aquí es donde puedes ajustar las propiedades de posición */
     position: fixed; /* O position: absolute; dependiendo de tu diseño */
@@ -282,7 +426,7 @@ h1{
 
 #contador-productos {
     font-size: 15px;
-    color: #fff;
+    color: white;
 }
 
 /* Estilo para el contenedor de productos del carrito */
@@ -291,7 +435,7 @@ h1{
     top: 170px;/* Coloca el carrito justo debajo del icono */
     right: 28px;/*Desplaza el contador de derecha a izquierda*/
     width: 260px;/* Ajusta el ancho del carrito según sea necesario */
-    background-color: #fff; /* Cambia el color de fondo según tu diseño */
+    background-color: white; /* Cambia el color de fondo según tu diseño */
     border-radius: 10px; /* Redondea las esquinas */
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.20); /* Añade sombra para resaltar */
     display: none; /* Oculta el carrito por defecto */
@@ -367,11 +511,6 @@ h1{
 
 /*-------------------------ESTILOS DE LOS PRODUCTOS------------------------------------------------------------------------------------*/
 
-main{
-    padding: 20px 40px;/*ajusta el releno segun sea necesario*/
-
-}
-
 /*sombra para resaltar los productos*/
 .item:hover {
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.65);
@@ -380,7 +519,7 @@ main{
 .container-items {
     
     display: grid;
-    grid-template-columns: repeat(4, 1fr);/*aqui se ajusta la cantidad de productos que se colocan por fila*/
+    grid-template-columns: repeat(3, 1fr);/*aqui se ajusta la cantidad de productos que se colocan por fila*/
     gap: 20px;/*espacio entre los productos*/
     margin-left: 1px; /* Ancho espacio entre el nav y los productos*/
     padding-top: 50px; /* Espacio para compensar la altura del nav */
@@ -421,11 +560,11 @@ img {
 
 /*color del texto del nombre del producto*/
 .info-product h2{
-    color: #ffffff;
+    color: white;
 }
 
 .price {
-    color: #ffffff;
+    color: white;
     font-size: 18px;
     font-weight: 900px;
 }
@@ -434,7 +573,7 @@ img {
 .info-product button {
     border: none;
     background: black;
-    color: #fff;
+    color: white;
     padding: 12px 5px;
     cursor: pointer;
 }
