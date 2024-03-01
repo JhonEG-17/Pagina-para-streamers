@@ -29,7 +29,7 @@ body {
 
 }
 /*--------------------------------ESTILOS PARA EL MENU DESPLEGABLE-----------------------------------------------------------------------------------------*/
-nav {
+nav {/*estos estilos pertenecen al menu de navegacion y se aplican de forma global*/
     border-radius: 15px;
     position: fixed;
     top: 0;
@@ -110,7 +110,7 @@ nav:hover {
     stroke: #000;
 }
 
-.icon{
+.icon{/*caracteristicas generales de los icon*/
     display: inline-flex;
     align-items: center;
     margin-right: 10px; /* Agrega un margen entre el icono y el texto */
@@ -142,15 +142,15 @@ nav:hover {
 }
 
 /*-----------------------------ESTILOS DEL ENCABEZADO DE LA PAGINA-----------------------------------------------*/
-header {
+header {/*estilos para el header (se aplica de forma global)*/
     display: flex;
     justify-content: space-between;/*para colocar los elementos al extremo*/
     align-items: center;/*para centrar en vertical*/
     padding: 20px 40px;/*ajusta el relleno segun sea necesario*/
 }
 
-main{
-    padding: 20px 40px;/*ajusta el releno segun sea necesario*/
+main{/*estilos para el main (se aplica de forma global)*/
+    padding: 20px 40px;/*ajusta el relleno segun sea necesario*/
 
 }
 
@@ -278,6 +278,23 @@ h1{
 
 
 
+/*Estilos para el body*/
+body redes{
+    /*fondo de la pagina*/
+    background-image: url('imagenes/fondos-para-la-pagina/fondo-tienda.png');
+    background-size: cover; /* Para que la imagen cubra todo el fondo */
+    background-position: center; /* Para centrar la imagen en el fondo */
+    background-attachment: fixed; /* Fondo estático */
+    /*resto de elementos de la pagina*/
+    margin: 0 auto;
+    max-width: 1200px;
+    font-family: 'Lato';/*tipo de letra predeterminaa para toda la pagina*/
+    color: white;/*color de la funete de texto de la pagina*/
+    background-color: #000;/*color del fondo de la pagina para que se mezcle con la imagen de fondo*/
+    margin-left: 70px; /* Ancho de la barra de navegación */
+
+}
+
 /* Estilos para centrar horizontalmente el cuerpo solo en redes.html */
 
 .container-title-redes h2{
@@ -292,27 +309,24 @@ h1{
   
 /* Estilos para la página de redes sociales */
 .container-enlaces {
-    display: flex;
-    flex-wrap: wrap; /* Permite que los elementos se envuelvan en filas */
-    justify-content: space-around; /* Distribuir el espacio alrededor de los elementos */
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 columnas de tamaño igual */
+    grid-gap: 20px; /* Espacio entre las imágenes */
+    justify-items: center; /* Centra horizontalmente las imágenes */
+    /*align-items: center;/* Centra verticalmente las imagenes */
     margin: 10px; /* Espaciado entre los elementos */
-    
+    max-width: 450px; /*Ajusta el ancho maximo del contenedor */
 }
   
 .container-enlaces a {
 
-    width: calc(33.33% - 20px); /* Establece el ancho de cada enlace */
-    margin: 10px; /* Espaciado entre los enlaces */
-    max-width: 150px; /* Cambia este valor al tamaño deseado en píxeles */
+    width: 100%; /* Toma el ancho completo de su contenedor */
     text-align: center; /* Centra el contenido horizontalmente */
-    box-sizing: border-box; /* Incluir bordes y relleno en el ancho y alto total */
-    padding: 10px; /* Añadir un relleno para separar visualmente el contenido */
-
 }
 
 .container-enlaces a img{
-    max-width: 150px;
-    height: auto;
+    max-width: 150px;/*tamaño maximo para los logos de las redes sociales*/
+    height: auto;/*alto automatico wn relacion con el max-width*/
 }
   
 .container-enlaces a:nth-child(1) img {
@@ -412,6 +426,7 @@ h1{
 }
 
 .count-products {
+    z-index: 999; /*asegura que no se quedara por debajode ningun otro elemento de la pagina*/
     position: fixed;
     top: 100px;
     right: 18px;
@@ -425,6 +440,7 @@ h1{
 }
 
 #contador-productos {
+    z-index: 999; /*asegura que no se quedara por debajode ningun otro elemento de la pagina*/
     font-size: 15px;
     color: white;
 }
