@@ -59,7 +59,7 @@ document.addEventListener("DOMContentLoaded", function() {
     });
 
     rowProduct.addEventListener('click', e => {
-        if (e.target.classList.contains('icon-close')) {
+        if (e.target.classList.contains('icon-delete')) {
             const product = e.target.parentElement;
             const title = product.querySelector('.titulo-producto-carrito').textContent;
 
@@ -114,7 +114,7 @@ document.addEventListener("DOMContentLoaded", function() {
                     viewBox="0 0 24 24"
                     stroke-width="1.5"
                     stroke="currentColor"
-                    class="icon-close"
+                    class="icon-delete"
                 >
                     <path
                         stroke-linecap="round"
@@ -148,6 +148,8 @@ document.addEventListener("DOMContentLoaded", function() {
 const wrapper = document.querySelector('.wrapper');
 const loginLink = document.querySelector('.login-link');
 const registerLink = document.querySelector('.register-link');
+const btnPopup= document.querySelector('.btnLogin-popup');
+const iconClose= document.querySelector('.icon-close');
 
 registerLink.addEventListener('click', ()=> {
     wrapper.classList.add('active');
@@ -155,4 +157,12 @@ registerLink.addEventListener('click', ()=> {
 
 loginLink.addEventListener('click', ()=> {
     wrapper.classList.remove('active');
+})
+
+btnPopup.addEventListener('click', ()=> {
+    wrapper.classList.add('active-popup');
+})
+
+iconClose.addEventListener('click', ()=> {
+    wrapper.classList.remove('active-popup');
 })
