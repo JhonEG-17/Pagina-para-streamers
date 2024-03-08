@@ -1,3 +1,37 @@
+
+
+
+//Pertenese a la funcion de login & register
+
+
+
+const wrapper = document.querySelector('.wrapper');
+const loginLink = document.querySelector('.login-link');
+const registerLink = document.querySelector('.register-link');
+const btnPopup= document.querySelector('.btnLogin-popup');
+const iconCloseLogin= document.querySelector('.icon-close-login');
+
+registerLink.addEventListener('click', ()=> {
+    wrapper.classList.add('active');
+})
+
+loginLink.addEventListener('click', ()=> {
+    wrapper.classList.remove('active');
+})
+
+btnPopup.addEventListener('click', ()=> {
+    wrapper.classList.add('active-popup');
+})
+
+iconCloseLogin.addEventListener('click', ()=> {
+    wrapper.classList.remove('active-popup');
+})
+
+
+
+//Pertenece a las cunciones de la tienda
+
+
 document.addEventListener("DOMContentLoaded", function() {
     const iconCart = document.querySelector('.icon-cart');
     const cartProducts = document.querySelector('.container-cart-products');
@@ -141,28 +175,3 @@ document.addEventListener("DOMContentLoaded", function() {
 
 
 
-//Pertenese a la funcion de login & register
-
-
-
-const wrapper = document.querySelector('.wrapper');
-const loginLink = document.querySelector('.login-link');
-const registerLink = document.querySelector('.register-link');
-const btnPopup= document.querySelector('.btnLogin-popup');
-const iconClose= document.querySelector('.icon-close');
-
-registerLink.addEventListener('click', ()=> {
-    wrapper.classList.add('active');
-})
-
-loginLink.addEventListener('click', ()=> {
-    wrapper.classList.remove('active');
-})
-
-btnPopup.addEventListener('click', ()=> {
-    wrapper.classList.add('active-popup');
-})
-
-iconClose.addEventListener('click', ()=> {
-    wrapper.classList.remove('active-popup');
-})
