@@ -31,6 +31,27 @@ iconCloseLogin.addEventListener('click', ()=> {
 
 //Pertenece a las cunciones de la tienda
 
+// Obtener referencia a los elementos necesarios
+const infoCartProduct = document.querySelector('.info-cart-product');
+const cartEmptyMessage = document.querySelector('.cart-empty');
+
+// Función para verificar si los elementos dentro de info-cart-product están vacíos
+function verificarCarrito() {
+    const elementosCarrito = infoCartProduct.querySelectorAll('span');
+
+    // Verificar si al menos un elemento dentro de info-cart-product tiene texto
+    const carritoVacio = Array.from(elementosCarrito).every(elemento => elemento.textContent.trim() === '');
+
+    // Mostrar u ocultar el mensaje de carrito vacío según sea necesario
+    if (carritoVacio) {
+        cartEmptyMessage.classList.remove('hidden'); // Mostrar el mensaje de carrito vacío
+    } else {
+        cartEmptyMessage.classList.add('hidden'); // Ocultar el mensaje de carrito vacío
+    }
+}
+
+// Llamar a la función verificarCarrito al cargar la página
+window.addEventListener('load', verificarCarrito);
 
 document.addEventListener("DOMContentLoaded", function() {
     const iconCart = document.querySelector('.icon-cart');
