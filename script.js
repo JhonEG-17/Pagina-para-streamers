@@ -27,9 +27,7 @@ iconCloseLogin.addEventListener('click', ()=> {
     wrapper.classList.remove('active-popup');
 })
 
-
-
-//Pertenece a las cunciones de la tienda
+//Pertenece a las funciones de la tienda
 
 // Obtener referencia a los elementos necesarios
 const infoCartProduct = document.querySelector('.info-cart-product');
@@ -54,6 +52,30 @@ function verificarCarrito() {
 window.addEventListener('load', verificarCarrito);
 
 document.addEventListener("DOMContentLoaded", function() {
+
+
+    //corresponde al menu desplegable par aversiones moviles
+
+    // Seleccionar el botón y el menú
+    var btnMenuPopup = document.querySelector('.btnMenu-popup');
+    var menu = document.querySelector('.menu');
+    var iconCloseMenu = document.querySelector('.icon-close-menu');
+
+    // Agregar evento de clic al botón
+    btnMenuPopup.addEventListener('click', function() {
+        // Mostrar el menú
+        menu.classList.add('show-menu');
+    });
+
+    // Agregar evento de clic al ícono de cerrar menú
+    iconCloseMenu.addEventListener('click', function() {
+        // Ocultar el menú
+        menu.classList.remove('show-menu');
+    });
+
+
+
+    // corresponde a las funciones de la tienda de ropa
     const iconCart = document.querySelector('.icon-cart');
     const cartProducts = document.querySelector('.container-cart-products');
 

@@ -38,14 +38,15 @@ nav {/*estos estilos pertenecen al menu de navegacion y se aplican de forma glob
     top: 0;
     left: 0;
     bottom: 0;
-    height: 95%;
+    height: 44%;
     width: 90px;
     background: white;
     transition: width 0.2s linear;
     box-shadow: 0 20px 700px rgba(0, 0, 0, 0.1);
-    overflow-y: auto; /* Añadido para habilitar el desplazamiento si el contenido del menú es demasiado largo */
+    /*overflow: auto; /* Añadido para habilitar el desplazamiento si el contenido del menú es demasiado largo */
     z-index: 100; /* Valor alto para asegurarse de que el menú esté delante de otros elementos */
     align-items: baseline;/*alinia el texto con los iconos */
+    overflow: hidden;
 }
 
 nav:hover {
@@ -87,6 +88,10 @@ nav:hover {
 .menu .icon svg {
     width: 40px;
     height: 40px;
+}
+
+.icon-close-menu{
+    display: none;
 }
 
 .home-icon{/*ICONO DE INICIO*/
@@ -212,41 +217,29 @@ h1{
     color: white;
 }
 
-/*---------------------------Corresponde a los estilosde twitch-----------------------------------------------------------------------------------------------------*/
-
-.container-title-twitch h2{
-    white-space: nowrap;
-    color: white;
-    display: flex;
-    align-items: center;
-    font-size: 45px;
-    padding: 15px;
-}
-.container-twitch-videos,
-.container-l4d2,
-.container-re,
-.container-gtasa{
-    display: flex; /* Establecer el contenedor como un contenedor flexible */
-    flex-wrap: nowrap; /* Evitar que los elementos se envuelvan a una nueva línea */
-    overflow-x: auto; /* Permitir desplazamiento horizontal si los elementos no caben en el contenedor */
-    grid-template-columns: repeat(4, 1fr);/*aqui se ajusta la cantidad de productos que se colocan por fila*/
-    gap: 20px;/*espacio entre los productos*/
-    grid-row-gap: 20px;/*espacio entre filas*/
-    margin-left: 1px; /* Ancho espacio entre el nav y los productos*/
-    padding-top: 50px; /* Espacio para compensar la altura del nav */
-}
-
 /*---------------------------Corresponde a los estilos del bloque de left 4 dead 2----------------------------------------------------------------------------------*/
-.container-title-l4d2 h2,
-.container-title-re h2,
-.container-title-gtasa h2{
-    white-space: nowrap;
+.container-title h2{
+    /*white-space: nowrap;*/
     color: white;
     display: flex;
-    align-items: center;
     font-size: 45px;
     padding: 15px;
 }
+
+.video-container{
+    padding-top: 15px;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    white-space: nowrap;
+    width: 100%;
+    margin-bottom: 20px; /* Esto es opcional, ajusta el margen según tus necesidades */
+}
+
+.container-videos{
+    display: inline-block;
+    margin-right: 20px;
+}
+
 
 
 
@@ -591,6 +584,71 @@ img {
     cursor: pointer;
 }
 
+
+
+/*--------------------------------------------------ESTILOS PARA SETINGS PROFILE---------------------------------------------------------------------------*/
+
+.container-profile-setings {
+    align-items: center;
+    position: absolute;
+    top: 200px;
+    right: 400px;
+    background: transparent;
+    width: 600px;
+    height: 600px;
+    border: 2px solid white;
+    border-radius: 15px;
+
+}
+
+.container-profile-setings button .direct-shopping{
+    text-align: center;
+    align-items: center;
+}
+.username {
+    margin: 30px;
+    font-size: 40px;
+    color: white;
+    text-align: center;
+
+}
+
+.tilte-pedidos {
+    text-align: right;
+    font-size: 30px;
+    color: white;
+
+}
+
+.direct-shopping {/*corresponde al boton de comienza a comprar*/
+    align-items: center;
+    text-align: center;
+    width: 400px;
+    height: 44px;
+    background: transparent;
+    border: 2px solid white;
+    outline: none;
+    border-radius: 6px;
+    cursor: pointer;
+    color: white;
+    font-size: 20px;
+    font-weight: 700;/*para el grosor de la letra adecuado*/
+}
+
+.direct-shopping:hover {/*corresponde a la animacion del boton de comienza a comprar*/
+    background: white;
+    color: black;
+
+}
+
+.setings a {
+    
+    color: white;
+    padding: 80px 200px 80px 50px;
+
+}
+
+
 /*--------------------------------------------------ESTILOS PARA INICIO DE SECION--------------------------------------------------------------------------*/
 
 
@@ -844,23 +902,94 @@ img {
     body {
         margin-left: 0; /* Reinicia el margen izquierdo para dispositivos móviles */
     }
-
+    .btnMenu-popup {
+        position: relative; /* O position: absolute; dependiendo de tu diseño */
+        top: 2px; /* Cambia este valor para ajustar la posición vertical */
+        right: 166px; /* Cambia este valor para ajustar la posición horizontal */
+        width: 30px;
+        height: 30px;
+        background: transparent;
+        border: 2px solid white;
+        border-radius: 6px;
+        cursor: pointer;
+        color: white;
+        margin-left: 40px;
+        transition: .5s;
+        z-index: 1;
+    }
+    
+    .btnMenu-popup:hover {
+        background: white;
+        color: rgb(255, 255, 255);
+    
+    }
+    
+    .btnMenu svg{
+        width: 20px;
+        height: 20px;
+    }
+    .buttom-menu-icon{/*ICONO DE MENU*/
+        stroke: #f9f8f8;
+    }
+    
     nav {
-        top: 400px;
-        height: 51%;
-        width: 30px; /* Ancho reducido para el menú en dispositivos móviles */
+        top: 25px;
+        left: 5px;
+        width: 90px; /* Ancho reducido para el menú en dispositivos móviles */
+        height: 95%;
+        bottom: 0;
+        box-shadow: 0 20px 60px rgba(0, 0, 0, 0.1);
+        transition: none;
+        overflow-y: none;
+        z-index: 1;
+    }
+
+    .nav.active {
+        height: 520px;
+    }
+    
+    nav:hover {
+        width: 220px;
+        height: 430px;
+        transition: none;
+    }
+
+    .menu .icon-close-menu{
+        display: flex;
+        color: white;
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 35px;
+        height: 35px;
+        background: rgb(0, 0, 0);
+        font-size: 1em;
+        color: white;
+        justify-content: center;
+        align-items: center;
+        border-bottom-left-radius: 15px;
+        cursor: pointer;
+        z-index: 1;
+    }
+    .menu{/*tamaño reducido del nav*/
+        display: none;/* Ocultar el menú por defecto */
+        width: 220px;
+        height: 430px;
+    }
+
+    .menu.show-menu {
+        display: block; /* Mostrar el menú cuando tiene la clase 'show-menu' */
     }
 
     .menu .nav-item {
         font-size: 14px; /* Tamaño de fuente reducido para dispositivos móviles */
     }
-
+    
     .menu .icon svg {
         width: 37px;
         height: 36px; /* Tamaño reducido para los iconos en dispositivos móviles */
     }
 
-        
     .icon{/*caracteristicas generales de los icon*/
         display: inline-flex;
         align-items: center;
@@ -893,7 +1022,6 @@ img {
     }
 
     .container-title{
-    
         font-size: 15px;
         padding: 10px;
     }
@@ -908,24 +1036,12 @@ img {
 
     /*---------------------------Corresponde a los estilosde twitch-----------------------------------------------------------------------------------------------------*/
 
-    .container-title-twitch h2,
-    .container-title-l4d2 h2,
-    .container-title-re h2,
-    .container-title-gtasa h2,
-    .container-title-redes h2 {
+    .container-title h2 {
         font-size: 15px;
-        padding: 15px;
     }
-    .container-twitch-videos,
-    .container-l4d2,
-    .container-re,
-    .container-gtasa {
-        overflow-x: auto;
-        grid-template-columns: repeat(4, 1fr);/*aqui se ajusta la cantidad de productos que se colocan por fila*/
-        gap: 20px;/*espacio entre los productos*/
-        grid-row-gap: 15px;/*espacio entre filas*/
-        margin-left: 1px; /* Ancho espacio entre el nav y los productos*/
-        padding-top: 15px; /* Espacio para compensar la altura del nav */
+    .container-videos iframe{
+        width: 150px;
+        height: 77px;
     }
 
     /* Estilos para centrar horizontalmente el cuerpo solo en redes.html */
@@ -1134,6 +1250,7 @@ img {
     .item img {
         width: 100%;
         height: 200px;
+        align-items: center;
         object-fit: cover;/*lo ajustamos para que no se desborde*/
         transition: all .5s;
     }
@@ -1160,7 +1277,7 @@ img {
 
 
     .info-product button {
-        width: 150px;
+        width: 170px;
         height: 40px;
     }
 
