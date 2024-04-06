@@ -173,8 +173,6 @@ nav:hover {
 header {/*estilos para el header (se aplica de forma global)*/
     
     display: flex;
-    justify-content: space-between;/*para colocar los elementos al extremo*/
-    align-items: center;/*para centrar en vertical*/
     padding: 20px 40px;/*ajusta el relleno segun sea necesario*/
 }
 
@@ -205,8 +203,10 @@ h1{
 /*-----------------------------PERTENECE A LOS ESTILOS DEL INICIO----------------------------------------------------------------------------------------------------*/
 
 .container-subtitle h2{
-    white-space: nowrap;
+    text-align: center;
+    /*white-space: nowrap;*/
     color: white;
+    font-size: 3em;
 }
 .container-subtitle b{
     white-space: nowrap;
@@ -222,7 +222,7 @@ h1{
     /*white-space: nowrap;*/
     color: white;
     display: flex;
-    font-size: 45px;
+    font-size: 30px;
     padding: 15px;
 }
 
@@ -232,7 +232,7 @@ h1{
     overflow-y: hidden;
     white-space: nowrap;
     width: 100%;
-    margin-bottom: 20px; /* Esto es opcional, ajusta el margen según tus necesidades */
+    /*margin-bottom: 20px; /* Esto es opcional, ajusta el margen según tus necesidades */
 }
 
 .container-videos{
@@ -254,29 +254,14 @@ h1{
 
 
 
-
-
-/* Estilos para centrar horizontalmente el cuerpo solo en redes.html */
-
-.container-title-redes h2{
-    white-space: nowrap;
-    color: white;
-    display: flex;
-    align-items: center;
-    font-size: 45px;
-    padding: 15px;
-}
-
   
 /* Estilos para la página de redes sociales */
 .container-enlaces {
     display: grid;
     grid-template-columns: repeat(3, 1fr); /* 3 columnas de tamaño igual */
     grid-gap: 20px; /* Espacio entre las imágenes */
-    justify-items: center; /* Centra horizontalmente las imágenes */
-    /*align-items: center;/* Centra verticalmente las imagenes */
-    margin: 10px; /* Espaciado entre los elementos */
     max-width: 450px; /*Ajusta el ancho maximo del contenedor */
+    margin: 0 auto; /* Centra horizontalmente el contenedor */
 }
   
 .container-enlaces a {
@@ -339,7 +324,7 @@ h1{
     display: grid;
     align-items: center;
     margin-left: 10px;
-    padding-top: 20px;
+    padding-top: 10px;
 }
 
 .container-date b{
@@ -352,11 +337,21 @@ h1{
 }
 
 .container-bio{
-    white-space: nowrap;
+    /* white-space: nowrap;*/
+    
+    text-align: justify;
     color: white;
     display: grid;
-    margin-left: 10px;
-    padding-top: 50px;
+    width: 601px; /* Ajusta el ancho al 100% del viewport */
+    /*height: 550px;*/
+    max-width: 100%; /* Establece el ancho máximo del contenedor */
+    
+    overflow: hidden; /* Evita que el contenido se desborde */
+
+}
+
+.container-bio p {
+    white-space: pre-line; /* Permite que el texto se envuelva automáticamente */
 }
 
 
@@ -368,7 +363,60 @@ h1{
 /*-----------------------------PERTENECE A LOS ESTILOS DE LA TIENDA------------------------------------------------------------------------------------------------*/
 
 
+/*-----------------------------PERTENECE A LOS ESTILOS DEL BUSCADOR DE PRODUCTOS-----------------------------------------------------------------------------------*/
+
+
+/* Estilos generales para el buscador */
+.container-search{
+    display: flex; /* Permite que el contenedor se ajuste automáticamente al contenido */
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    background-color: transparent;
+    top: 111px;
+    width: 550px;
+    height: 65px;
+    border: 2px solid white; /* Define el grosor y el color del borde */
+    border-radius: 30px; /* Define el radio de los extremos para hacerlos redondeados */
+    padding: 5px; /* Agrega un poco de espacio interno para que el texto no esté pegado al borde */
+    
+}
+
+/* Estilos para el input */
+.container-search input[type="text"] {
+    background-color: transparent; /* Hace que el fondo del input sea transparente */
+    padding-left: 25px;
+    border: none; /* Elimina el borde predeterminado del input */
+    width: 100%; /* Define el ancho del input */
+    color: white; /*Define el color del texto dentro del search*/
+    font-size: .6em; /*Define el tamaño del texto dentro del search*/
+    outline: none; /* Elimina el contorno al enfocar el input */
+}
+
+/* Estilos para el botón */
+.container-search .btn-search {
+    background-color: transparent; /* Hace que el fondo del botón sea transparente */
+    border: none; /* Elimina el borde del botón */
+    border-radius: 15%;
+    width: 45px;
+    height: 45px;
+    padding: 5px;
+    position: relative;
+    outline: none; /* Elimina el contorno al enfocar el botón */
+    cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
+}
+
+/* Estilos para el icono dentro del botón */
+.container-search .search-icon {
+    width: 24px; /* Define el ancho del icono */
+    height: 24px; /* Define la altura del icono */
+    stroke-width: 1.5; /* Define el grosor de las líneas del icono */
+    stroke: white; /* Define el color de las líneas del icono */
+}
+
+
 /*---------------------------------ESTILOS PARA EL CARRITO---------------------------------------------------------------------------------*/
+
 
 .container-icon {
     position: relative;
@@ -524,7 +572,7 @@ h1{
     overflow-x: auto; /* Permitir desplazamiento horizontal si los elementos no caben en el contenedor */
     gap: 20px;/*espacio entre los productos*/
     margin-left: 1px; /* Ancho espacio entre el nav y los productos*/
-    padding-top: 20px; /* Espacio para compensar la altura del nav */
+    padding-top: 90px; /* Espacio para compensar la altura del nav */
 }
 
 .item {
@@ -903,9 +951,9 @@ img {
         margin-left: 0; /* Reinicia el margen izquierdo para dispositivos móviles */
     }
     .btnMenu-popup {
-        position: relative; /* O position: absolute; dependiendo de tu diseño */
+        position: absolute; /* O position: absolute; dependiendo de tu diseño */
         top: 2px; /* Cambia este valor para ajustar la posición vertical */
-        right: 166px; /* Cambia este valor para ajustar la posición horizontal */
+        left: 0; /* Cambia este valor para ajustar la posición horizontal */
         width: 30px;
         height: 30px;
         background: transparent;
@@ -913,7 +961,8 @@ img {
         border-radius: 6px;
         cursor: pointer;
         color: white;
-        margin-left: 40px;
+        margin-top: 28px;
+        margin-left: 10px;
         transition: .5s;
         z-index: 1;
     }
@@ -1011,14 +1060,11 @@ img {
     header {/*estilos para el header (se aplica de forma global)*/
         
         display: flex;
-        justify-content: space-between;/*para colocar los elementos al extremo*/
-        align-items: center;/*para centrar en vertical*/
         padding: 20px 40px;/*ajusta el relleno segun sea necesario*/
     }
 
     main{/*estilos para el main (se aplica de forma global)*/
         padding: 20px 40px;/*ajusta el relleno segun sea necesario*/
-        display: grid;
     }
 
     .container-title{
@@ -1026,41 +1072,50 @@ img {
         padding: 10px;
     }
 
-    .container-subtitle {
-        font-size: 10PX;
+    .container-subtitle h2 {
+        font-size: 1.2em;
     }
 
-    .container-text {
-        font-size: 8px;
-    }
-
-    /*---------------------------Corresponde a los estilosde twitch-----------------------------------------------------------------------------------------------------*/
+    /*---------------------------Corresponde a los estilos de los videos-----------------------------------------------------------------------------------------------------*/
 
     .container-title h2 {
+        padding: 0;
         font-size: 15px;
+    }
+    .video-container{
+        padding-top: 0px;
+        overflow-x: scroll;
+        overflow-y: hidden;
+        white-space: nowrap;
+        width: 100%;
+        margin-bottom: 20px; /* Esto es opcional, ajusta el margen según tus necesidades */
+    }
+    
+    .container-videos{
+        overflow-y: hidden; /* Oculta el desplazamiento vertical */
+        width: 343px;
+        display: inline-block;
+        margin-right: 20px;
     }
     .container-videos iframe{
         width: 150px;
-        height: 77px;
+        height: 78px;
     }
-
+    
     /* Estilos para centrar horizontalmente el cuerpo solo en redes.html */
 
     
 
-    
     /* Estilos para la página de redes sociales */
     .container-enlaces {
-        /*display: table;*/
-        display: grid;
-        grid-template-columns: repeat(3, 1fr); /* 3 columnas de tamaño igual */
-        grid-gap: 5px; /* Espacio entre las imágenes */
-        justify-items: center; /* Centra horizontalmente las imágenes */
-        align-items: center;/* Centra verticalmente las imagenes */
-        margin: 35px; /* Espaciado entre los elementos */
-        max-width: 50px; /*Ajusta el ancho maximo del contenedor */
+        padding: 50px;
     }
-
+    
+    .container-enlaces a {
+        width: 100%; /* Toma el ancho completo de su contenedor */
+        text-align: center; /* Centra el contenido horizontalmente */
+    }
+    
     .container-enlaces a img{
         max-width: 70px;/*tamaño maximo para los logos de las redes sociales*/
         height: auto;/*alto automatico wn relacion con el max-width*/
@@ -1077,27 +1132,65 @@ img {
         margin-left: 10px;
         padding-top: 0px;
     }
-
     .container-date b{
         font-size: 10px;
-        padding: 10px;
-        top: 65px;
+        padding: 0px;
+        top: 85px;
     }
 
-    .container-bio{
+    .container-bio {
+        text-align: justify;
         font-size: 10px;
-        position: fixed; /* Establece la posición fija para que permanezca en la pantalla mientras se desplaza */
-        top: 80px;
-        bottom: 0; /* Lo coloca en la parte inferior de la pantalla */
-        left: 0; /* Lo coloca en el lado izquierdo de la pantalla */
-        width: 100%; /* Ajusta el ancho al 100% del viewport */
-        max-height: calc(100vh - 20px); /* Establece la altura máxima del contenedor al tamaño de la ventana del navegador menos un pequeño espacio */
-        overflow-y: auto; /* Agrega una barra de desplazamiento vertical si el contenido se desborda */
-        /*transform: translateY(calc(100% - 100vh)); /* Ajusta el contenedor para que comience justo debajo del borde superior de la pantalla */
+        left: 0px; /* Lo coloca en el lado izquierdo de la pantalla */
+        width: 349px; /* Ajusta el ancho al 100% del viewport */
+        height: 550px;
+        max-width: 100%; /* Establece el ancho máximo del contenedor */
+        overflow: hidden; /* Evita que el contenido se desborde */
+    }
+    
+    .container-bio p {
+        white-space: pre-line; /* Permite que el texto se envuelva automáticamente */
     }
 
     /*-----------------------------PERTENECE A LOS ESTILOS DE LA TIENDA------------------------------------------------------------------------------------------------*/
 
+
+    /*------------------------------PERTENCE A LOS ESTILOS DEL BUSCADOR------------------------------------------------------------------------------------------------*/
+
+    
+    /* Estilos generales para el buscador */
+    .container-search{
+        top: 0px;
+        right: 0px;
+        left: 14px;
+        width: 160px;
+        height: 25px;
+        
+    }
+
+    /* Estilos para el input */
+    .container-search input[type="text"] {
+        background-color: transparent; /* Hace que el fondo del input sea transparente */
+        padding-left: 5px;
+        border: 5px; /* Elimina el borde predeterminado del input */
+        width: 100%; /* Define el ancho del input */
+        color: white; /*Define el color del texto dentro del search*/
+        font-size: .6em; /*Define el tamaño del texto dentro del search*/
+        outline: none; /* Elimina el contorno al enfocar el input */
+    }
+
+    /* Estilos para el botón */
+    .container-search .btn-search {
+        width: 15px;
+        height: 15px;
+        padding: 0px;
+    }
+
+    /* Estilos para el icono dentro del botón */
+    .container-search .search-icon {
+        width: 10px; /* Define el ancho del icono */
+        height: 10px; /* Define la altura del icono */
+    }
 
     /*---------------------------------ESTILOS PARA EL CARRITO---------------------------------------------------------------------------------*/
 
@@ -1233,12 +1326,17 @@ img {
     }
 
     .container-items {
+        overflow-y: hidden; /* Oculta el desplazamiento vertical */
+        width: 343px;
+        height: 240px;
         gap: 15px;/*espacio entre los productos*/
         margin-left: 0px; /* Ancho espacio entre el nav y los productos*/
         padding-top: 0px; /* Espacio para compensar la altura del nav */
     }
 
     .item {
+        width: 120px;
+        height: 210px;
         border-radius: 15px;/*para dar un borde redondeado a nuestro contenedor de imagenes*/
     }
 
@@ -1248,8 +1346,8 @@ img {
     }
 
     .item img {
-        width: 100%;
-        height: 200px;
+        width: 120px;
+        height: 150px;
         align-items: center;
         object-fit: cover;/*lo ajustamos para que no se desborde*/
         transition: all .5s;
@@ -1257,29 +1355,37 @@ img {
 
 
     .item:hover img {
-        transform: scale(1.2);
+        transform: scale(1.2);/* Zoom que se le hara al item o imagen del produto al poner el puntero encima*/
     }
 
     .info-product {
-        flex-direction: column;
-        gap: 5px;
+        flex-direction: column;/* Lo acomoda el texto en columnas */
+        gap: 5px; /* Espacio entre el titulo del producto, el precio, y el boton de añadir */
     }
 
     /*color del texto del nombre del producto*/
     .info-product h2{
-        font-size: 20px;
+        white-space: nowrap; /* Evita saltos de línea automáticos */
+        font-size: 10px; /* Tamaño de letra*/
     }
 
     .price {
-        font-size: 15px;
+        font-size: 12px; /*tamaño de letra*/
         font-weight: 900px;
     }
 
 
     .info-product button {
-        width: 170px;
-        height: 40px;
+        padding: 1;
+        width: 120px;
+        height: auto;
     }
+
+
+
+
+
+
 
     /*--------------------------------------------------ESTILOS PARA INICIO DE SECION--------------------------------------------------------------------------*/
 
@@ -1300,7 +1406,7 @@ img {
 
     .wrapper {
         top: auto;
-        right: 13%;
+        right: 15%;
         width: 300px;
         height: 450px;
 
@@ -1308,8 +1414,6 @@ img {
 
     .form-box h2 {
         font-size: 2em;
-        color: white;
-        text-align: center;
         
     }
 
@@ -1321,42 +1425,15 @@ img {
     .btn-logreg {
         width: 100%;
         height: 45px;
-        background: white;
-        border: none;
-        outline: none;
         border-radius: 10px;
-        cursor: pointer;
         font-size: 1em;
-        color: black;
         font-weight: 500;/*para el grosor de la letra adecuado*/
     }
 
     .login-register {
         font-size: .9em;
-        color: white;
-        text-align: center;
         font-weight: 500;/*para el grosor de la letra adecuado*/
         margin: 25px 0 10px;
-    }
-
-    .login-register p a {
-        color: white;
-        text-decoration: none;
-        font-weight: 600;
-
-    }
-
-    .login-register p a:hover {
-        text-decoration: underline;
-    }
-
-    .login-register p {
-        color: white;
-        
-    }
-
-    .login-register a {
-        color: white;
     }
 
 }
