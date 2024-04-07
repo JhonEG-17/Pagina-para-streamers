@@ -15,7 +15,7 @@
 
 body {
     /*fondo de la pagina*/
-    background-image: url('imagenes/fondos-para-la-pagina/fondo-tienda.png');
+    background-image: url('assets/img/fondo-para-la-pagina/fondo-tienda.png');
     background-size: cover; /* Para que la imagen cubra todo el fondo */
     background-position: center; /* Para centrar la imagen en el fondo */
     background-attachment: fixed; /* Fondo estático */

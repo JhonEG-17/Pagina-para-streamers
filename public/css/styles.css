@@ -1,0 +1,1444 @@
+
+/*--------------------------------------Estilos globales-----------------------------------------------------------------------------------------------------*/
+*::after,
+*::before,
+* {
+    margin: 0;
+    padding: 0;
+    outline: none;
+    border: none;
+    text-decoration: none;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+
+body {
+    /*fondo de la pagina*/
+    background-image: url('assets/img/fondo-para-la-pagina/fondo-tienda.png');
+    background-size: cover; /* Para que la imagen cubra todo el fondo */
+    background-position: center; /* Para centrar la imagen en el fondo */
+    background-attachment: fixed; /* Fondo estático */
+    /*resto de elementos de la pagina*/
+    margin: 0;
+    padding: 0;
+    max-width: 1200px;
+    font-family: 'Lato', sans-serif;
+    color: white;
+    background-color: #000;
+    margin-left: 70px; /* Ancho de la barra de navegación */
+
+}
+
+/*--------------------------------ESTILOS PARA EL MENU DESPLEGABLE-----------------------------------------------------------------------------------------*/
+nav {/*estos estilos pertenecen al menu de navegacion y se aplican de forma global*/
+    
+    border-radius: 15px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    height: 44%;
+    width: 90px;
+    background: white;
+    transition: width 0.2s linear;
+    box-shadow: 0 20px 700px rgba(0, 0, 0, 0.1);
+    /*overflow: auto; /* Añadido para habilitar el desplazamiento si el contenido del menú es demasiado largo */
+    z-index: 100; /* Valor alto para asegurarse de que el menú esté delante de otros elementos */
+    align-items: baseline;/*alinia el texto con los iconos */
+    overflow: hidden;
+}
+
+nav:hover {
+    width: 280px;
+    transition: all 0.5s ease;
+}
+
+.menu {/*MENU DESPLEGABLE*/
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    transition: all 0.5s ease;
+    margin: 5px 1px 1px 5px;
+    width: 80px;
+    font-size: 18px;
+}
+
+.menu .nav-item {
+    color: black;/*da el color negro al texto de aladoo de cada icono*/
+    display: inline-block; /* Mostrar en línea */
+    vertical-align: middle; /* Alinear verticalmente al centro */
+    font-weight: bold;
+    font-size: 18px;
+    text-transform: uppercase;
+    padding-left: 20px; /*espaciado de el texto con el icono*/
+}
+
+.menu .icon:first-child {/*aplica para el primer icono del nav llamado home-icon*/
+    margin-top: 20px; /* Agrega un espacio de 20px hacia arriba */
+}
+
+.menu .icon {
+    display: flex; /* Cambiar a flex */
+    align-items: center; /* Alinear verticalmente al centro */
+    margin-bottom: 20px; /* Agrega un espacio de 20px hacia abajo */
+    margin-right: 10px; /* Opcional: Añadir margen entre el icono y el texto */
+}
+
+.menu .icon svg {
+    width: 40px;
+    height: 40px;
+}
+
+.icon-close-menu{
+    display: none;
+}
+
+.home-icon{/*ICONO DE INICIO*/
+    display: table;/*dispone los elementos en forma de tabla*/
+    position: relative;
+    margin: 1px 1px 1px 0px;
+    width: 40px;
+    height: 40px;
+    stroke: #000;
+}
+.net-icon{/*ICONO DE REDES*/
+    display: table;/*dispone los elementos en forma de tabla*/
+    position: relative;
+    margin: 1px 1px 1px 0px;
+    width: 40px;
+    height: 40px;
+    stroke: #000;
+}
+.info-icon{/*ICONO DE INFORMACION*/
+    display: table;/*dispone los elementos en forma de tabla*/
+    position: relative;
+    margin: 1px 1px 1px 0px;
+    width: 40px;
+    height: 40px;
+    stroke: #000;
+}
+.shop-icon{/*ICONO DE TIENDA*/
+    display: table;/*dispone los elementos en forma de tabla*/
+    position: relative;
+    margin: 1px 1px 1px 0px;
+    width: 40px;
+    height: 40px;
+    stroke: #000;
+}
+.wallet-icon{/*ICONO DE CARTERA*/
+    display: table;/*dispone los elementos en forma de tabla*/
+    position: relative;
+    margin: 1px 1px 1px 0px;
+    width: 40px;
+    height: 40px;
+    stroke: #000;
+}
+.profile-icon{/*ICONO DE PERFIL*/
+    display: table;/*dispone los elementos en forma de tabla*/
+    position: relative;
+    margin: 1px 1px 1px 0px;
+    width: 40px;
+    height: 40px;
+    stroke: #000;
+}
+.logout-icon{/*ICONO DE CERRAR SECION*/
+    display: table;/*dispone los elementos en forma de tabla*/
+    position: relative;
+    margin: 1px 1px 1px 0px;
+    width: 40px;
+    height: 40px;
+    stroke: #000;
+}
+
+.icon{/*caracteristicas generales de los icon*/
+    display: inline-flex;
+    align-items: center;
+    margin-right: 10px; /* Agrega un margen entre el icono y el texto */
+}
+
+.icon span {
+    font-weight: bold;/*para el grosor de la letra adecuado*/
+    /*padding-left: 15px;*/
+    font-size: 18px;
+    text-transform: uppercase;
+}
+
+.fas {/*estilos para el texto alado de los iconos del menu*/
+    
+    padding-left: 20px;/*espaciado de los iconos y el nav*/
+}
+
+/*-----------------------------ESTILOS DEL ENCABEZADO DE LA PAGINA-----------------------------------------------*/
+header {/*estilos para el header (se aplica de forma global)*/
+    
+    display: flex;
+    padding: 20px 40px;/*ajusta el relleno segun sea necesario*/
+}
+
+main{/*estilos para el main (se aplica de forma global)*/
+    padding: 20px 40px;/*ajusta el relleno segun sea necesario*/
+    
+}
+
+.container-title{
+    white-space: nowrap;
+    display: flex;
+    align-items: center;
+    font-size: 45px;
+    padding: 10px;
+    z-index: 1; /*asegura que no se quedara por debajode ningun otro elemento de la pagina*/
+}
+
+h1{
+    color: rgb(255, 255, 255);
+}
+
+
+
+
+
+
+
+/*-----------------------------PERTENECE A LOS ESTILOS DEL INICIO----------------------------------------------------------------------------------------------------*/
+
+.container-subtitle h2{
+    text-align: center;
+    /*white-space: nowrap;*/
+    color: white;
+    font-size: 3em;
+}
+.container-subtitle b{
+    white-space: nowrap;
+    color: white;
+}
+.container-text p{
+    white-space: nowrap;
+    color: white;
+}
+
+/*---------------------------Corresponde a los estilos del bloque de left 4 dead 2----------------------------------------------------------------------------------*/
+.container-title h2{
+    /*white-space: nowrap;*/
+    color: white;
+    display: flex;
+    font-size: 30px;
+    padding: 15px;
+}
+
+.video-container{
+    padding-top: 15px;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    white-space: nowrap;
+    width: 100%;
+    /*margin-bottom: 20px; /* Esto es opcional, ajusta el margen según tus necesidades */
+}
+
+.container-videos{
+    display: inline-block;
+    margin-right: 20px;
+}
+
+
+
+
+
+
+
+
+/*-----------------------------PERTENECE A LOS ESTILOS DE REDES SOCIALES------------------------------------------------------------------------------------------------*/
+
+
+
+
+
+
+  
+/* Estilos para la página de redes sociales */
+.container-enlaces {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 columnas de tamaño igual */
+    grid-gap: 20px; /* Espacio entre las imágenes */
+    max-width: 450px; /*Ajusta el ancho maximo del contenedor */
+    margin: 0 auto; /* Centra horizontalmente el contenedor */
+}
+  
+.container-enlaces a {
+
+    width: 100%; /* Toma el ancho completo de su contenedor */
+    text-align: center; /* Centra el contenido horizontalmente */
+}
+
+.container-enlaces a img{
+    max-width: 150px;/*tamaño maximo para los logos de las redes sociales*/
+    height: auto;/*alto automatico wn relacion con el max-width*/
+}
+  
+.container-enlaces a:nth-child(1) img {
+    filter: drop-shadow(5px 5px 5px rgba(59, 89, 152, 0.8)); /* Sombra azul para Facebook */
+}
+  
+.container-enlaces a:nth-child(2) img {
+    filter: drop-shadow(5px 5px 5px rgba(219, 72, 129, 0.8)); /* Sombra rosa-morada para Instagram */
+}
+
+.container-enlaces a:nth-child(3) img {
+    filter: drop-shadow(5px 5px 5px rgba(255, 0, 0, 0.8)); /* Sombra roja para youtube */
+}
+
+.container-enlaces a:nth-child(4) img {
+    filter: drop-shadow(5px 5px 5px rgba(187, 0, 255, 0.8)); /* Sombra morada para twitch */
+}
+
+.container-enlaces a:nth-child(5) img {
+    filter: drop-shadow(5px 5px 5px rgba(63, 133, 255, 0.8)); /* Sombra azul para tiktok */
+}
+
+.container-enlaces a:nth-child(6) img {
+    filter: drop-shadow(5px 5px 5px rgba(255, 255, 255, 0.8)); /* Sombra blanca para x */
+}
+
+.container-enlaces a:nth-child(7) img {
+    filter: drop-shadow(5px 5px 5px rgba(83, 67, 255, 0.8)); /* Sombra morada-azul para discord */
+    /*max-width: 100%;*/
+}
+
+
+
+
+
+/*-----------------------------PERTENECE A LOS ESTILOS DE SOBRE MI-------------------------------------------------------------------------------------------------*/
+
+
+
+
+
+
+
+
+.container-date{
+    grid-template-columns: repeat(2, 1fr);/*aqui se ajusta la cantidad de productos que se colocan por fila*/
+    white-space: nowrap;/*para que no de saltos de linea donde no debe haber*/
+    color: white;
+    display: grid;
+    align-items: center;
+    margin-left: 10px;
+    padding-top: 10px;
+}
+
+.container-date b{
+    position: fixed;
+    padding: 10px;
+    /*grid-template-columns: repeat(1, 1fr);/*aqui se ajusta la cantidad de productos que se colocan por fila*/
+    /*white-space: nowrap;/*para que no de saltos de linea donde no debe haber*/
+    color: white;
+    top: 135px;
+}
+
+.container-bio{
+    /* white-space: nowrap;*/
+    
+    text-align: justify;
+    color: white;
+    display: grid;
+    width: 601px; /* Ajusta el ancho al 100% del viewport */
+    /*height: 550px;*/
+    max-width: 100%; /* Establece el ancho máximo del contenedor */
+    
+    overflow: hidden; /* Evita que el contenido se desborde */
+
+}
+
+.container-bio p {
+    white-space: pre-line; /* Permite que el texto se envuelva automáticamente */
+}
+
+
+
+
+
+
+
+/*-----------------------------PERTENECE A LOS ESTILOS DE LA TIENDA------------------------------------------------------------------------------------------------*/
+
+
+/*-----------------------------PERTENECE A LOS ESTILOS DEL BUSCADOR DE PRODUCTOS-----------------------------------------------------------------------------------*/
+
+
+/* Estilos generales para el buscador */
+.container-search{
+    display: flex; /* Permite que el contenedor se ajuste automáticamente al contenido */
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    background-color: transparent;
+    top: 111px;
+    width: 550px;
+    height: 65px;
+    border: 2px solid white; /* Define el grosor y el color del borde */
+    border-radius: 30px; /* Define el radio de los extremos para hacerlos redondeados */
+    padding: 5px; /* Agrega un poco de espacio interno para que el texto no esté pegado al borde */
+    
+}
+
+/* Estilos para el input */
+.container-search input[type="text"] {
+    background-color: transparent; /* Hace que el fondo del input sea transparente */
+    padding-left: 25px;
+    border: none; /* Elimina el borde predeterminado del input */
+    width: 100%; /* Define el ancho del input */
+    color: white; /*Define el color del texto dentro del search*/
+    font-size: .6em; /*Define el tamaño del texto dentro del search*/
+    outline: none; /* Elimina el contorno al enfocar el input */
+}
+
+/* Estilos para el botón */
+.container-search .btn-search {
+    background-color: transparent; /* Hace que el fondo del botón sea transparente */
+    border: none; /* Elimina el borde del botón */
+    border-radius: 15%;
+    width: 45px;
+    height: 45px;
+    padding: 5px;
+    position: relative;
+    outline: none; /* Elimina el contorno al enfocar el botón */
+    cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
+}
+
+/* Estilos para el icono dentro del botón */
+.container-search .search-icon {
+    width: 24px; /* Define el ancho del icono */
+    height: 24px; /* Define la altura del icono */
+    stroke-width: 1.5; /* Define el grosor de las líneas del icono */
+    stroke: white; /* Define el color de las líneas del icono */
+}
+
+
+/*---------------------------------ESTILOS PARA EL CARRITO---------------------------------------------------------------------------------*/
+
+
+.container-icon {
+    position: relative;
+}
+
+.icon-cart {/*estilos para el icono del carrito*/
+    z-index: 1; /*asegura que no se quedara por debajode ningun otro elemento de la pagina*/
+    width: 65px;
+    height: 65px;
+    stroke: white;
+    cursor: pointer;
+    /* Aquí es donde puedes ajustar las propiedades de posición */
+    position: fixed; /* O position: absolute; dependiendo de tu diseño */
+    top: 600px; /* Cambia este valor para ajustar la posición vertical */
+    right: 25px; /* Cambia este valor para ajustar la posición horizontal */
+    background-color: black;/*color del circulo que contiene el carrito*/
+    background-size: auto;
+    border-radius: 50%;/*para hacerlo redondo el carrito*/
+
+}
+
+.count-products {/*pertenece al contador de productos del carrito*/
+    z-index: 999; /*asegura que no se quedara por debajode ningun otro elemento de la pagina*/
+    position: fixed;
+    top: 590px;/*desplaza el contador de arriba a abajo*/
+    right: 18px;/*desplaza el contador de derecha a izquierda*/
+    background-color: #f90000;/*color del circulo que contiene el numero del contador*/
+    width: 25px;/*ancho del contador*/
+    height: 25px;/*alto del contador*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;/*para hacerlo redondo el contador*/
+}
+
+#contador-productos {/*pertenece al contador del carrito*/
+    z-index: 999; /*asegura que no se quedara por debajode ningun otro elemento de la pagina*/
+    font-size: 15px;/*tamaño del texto del numero del contador del carrito*/
+    color: white;/*color del numero del contador de productos*/
+}
+
+/* Estilo para el contenedor de productos del carrito */
+.container-cart-products {
+    position: fixed;
+    top: 115px;/* Coloca el contenido del carrito justo debajo del icono */
+    right: 28px;/*Desplaza el contenido delcarrito de derecha a izquierda*/
+    width: 260px;/* Ajusta el ancho del carrito según sea necesario */
+    background-color: white; /* Cambia el color de fondo según tu diseño */
+    border-radius: 10px; /* Redondea las esquinas */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.20); /* Añade sombra para resaltar */
+    display: none; /* Oculta el carrito por defecto */
+    z-index: 1; /* Asegura que esté por encima del contenido */
+    overflow-y: auto; /* Habilitar desplazamiento vertical */
+    max-height: calc(100vh - 200px); /* Establecer una altura máxima para el desplazamiento */
+}
+
+.icon-cart:hover {
+    cursor: pointer;
+}
+
+/* Estilo para mostrar el carrito cuando está abierto */
+.container-cart-products.open {
+    display: block;
+}
+
+/*--------------------------Estilo para los productos en el carrito--------------------------------------------------------------------------------*/
+.cart-product {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.20);
+}
+
+.icon-close {
+    display: flex;
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    width: 20px;
+    height: 20px;
+    background-color: black;/*color del circulo que contiene el numero del contador*/
+    width: 25px;/*ancho del contador*/
+    height: 25px;/*alto del contador*/
+    border-radius: 50%;/*para hacerlo circular*/
+    cursor: pointer;
+}
+
+.info-cart-product {
+    color: black;
+    display: inline-block;
+    flex-direction: column;
+    text-align: left;
+}
+
+.icon-delete {
+    color: black;
+}
+
+.cantidad-producto-carrito {
+    
+    font-size: 20px;
+}
+
+.titulo-producto-carrito {
+    font-size: 12px;
+    font-weight: 850;/*para el grosor de la letra adecuado*/
+
+}
+
+.precio-producto-carrito {
+    font-size: 16px;
+}
+
+.icon-delete {
+    width: 15px;
+    height: 15px;
+    cursor: pointer;
+}
+
+.cart-total {
+    color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.cart-total h3 {
+    font-size: 18px;
+    font-weight: bold;/*para el grosor de la letra adecuado*/
+}
+
+.total-pagar {
+    font-size: 18px;
+    font-weight: bold;/*para el grosor de la letra adecuado*/
+}
+
+.icon-close:hover {
+    stroke: rgb(0, 0, 0);
+}
+
+/*-------------------------ESTILOS DE LOS PRODUCTOS------------------------------------------------------------------------------------*/
+
+/*sombra para resaltar los productos*/
+.item:hover {
+    box-shadow: 0 20px 30px rgba(0, 0, 0, 0.65);
+}
+
+.container-items {
+    display: flex; /* Establecer el contenedor como un contenedor flexible */
+    flex-wrap: nowrap; /* Evitar que los elementos se envuelvan a una nueva línea */
+    overflow-x: auto; /* Permitir desplazamiento horizontal si los elementos no caben en el contenedor */
+    gap: 20px;/*espacio entre los productos*/
+    margin-left: 1px; /* Ancho espacio entre el nav y los productos*/
+    padding-top: 90px; /* Espacio para compensar la altura del nav */
+}
+
+.item {
+    border-radius: 15px;/*para dar un borde redondeado a nuestro contenedor de imagenes*/
+}
+
+img {
+    max-width: 100%;
+}
+
+.item img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;/*lo ajustamos para que no se desborde*/
+    border-radius: 15px 15px 0 0;
+    transition: all .5s;
+}
+
+.item figure {
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+.item:hover img {
+    transform: scale(1.2);
+}
+
+.info-product {
+    align-items: center;/*alinia los items de forma centrada*/
+    padding: 15px 30px;/*espaciado entre la informacion*/
+    line-height: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+/*color del texto del nombre del producto*/
+.info-product h2{
+    color: white;
+    text-align: center; /* Centrar el texto horizontalmente */
+}
+
+.price {
+    color: white;
+    font-size: 18px;
+    font-weight: 900px;
+}
+
+
+.info-product button {
+    width: 180px;
+    border-radius: 10px;
+    border: none;
+    background: black;
+    color: white;
+    padding: 12px 5px;
+    cursor: pointer;
+}
+
+
+
+/*--------------------------------------------------ESTILOS PARA SETINGS PROFILE---------------------------------------------------------------------------*/
+
+.container-profile-setings {
+    align-items: center;
+    position: absolute;
+    top: 200px;
+    right: 400px;
+    background: transparent;
+    width: 600px;
+    height: 600px;
+    border: 2px solid white;
+    border-radius: 15px;
+
+}
+
+.container-profile-setings button .direct-shopping{
+    text-align: center;
+    align-items: center;
+}
+.username {
+    margin: 30px;
+    font-size: 40px;
+    color: white;
+    text-align: center;
+
+}
+
+.tilte-pedidos {
+    text-align: right;
+    font-size: 30px;
+    color: white;
+
+}
+
+.direct-shopping {/*corresponde al boton de comienza a comprar*/
+    align-items: center;
+    text-align: center;
+    width: 400px;
+    height: 44px;
+    background: transparent;
+    border: 2px solid white;
+    outline: none;
+    border-radius: 6px;
+    cursor: pointer;
+    color: white;
+    font-size: 20px;
+    font-weight: 700;/*para el grosor de la letra adecuado*/
+}
+
+.direct-shopping:hover {/*corresponde a la animacion del boton de comienza a comprar*/
+    background: white;
+    color: black;
+
+}
+
+.setings a {
+    
+    color: white;
+    padding: 80px 200px 80px 50px;
+
+}
+
+
+/*--------------------------------------------------ESTILOS PARA INICIO DE SECION--------------------------------------------------------------------------*/
+
+
+
+
+
+
+
+.btnLogin-popup {
+    position: fixed; /* O position: absolute; dependiendo de tu diseño */
+    top: 60px; /* Cambia este valor para ajustar la posición vertical */
+    right: 25px; /* Cambia este valor para ajustar la posición horizontal */
+    width: 130px;
+    height: 50px;
+    background: transparent;
+    border: 2px solid white;
+    outline: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 1.1em;
+    color: white;
+    font-weight: 500;/*para el grosor de la letra adecuado*/
+    margin-left: 40px;
+    transition: .5s;
+
+}
+
+.btnLogin-popup:hover {
+    background: white;
+    color: black;
+
+}
+
+.wrapper {
+    position: fixed;
+    top: auto;
+    right: 36%;
+    width: 400px;
+    height: 440px;
+    background: transparent;
+    border: 2px solid rgba(255, 255, 255, .5);
+    border-radius: 20px;
+    backdrop-filter: blur(20px);
+    box-shadow: 0 0 30px rgba(0, 0, 0, .5);
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    transform: scale(0);
+    transition: transform .5s ease, heigth .2s ease;
+    z-index: 1;
+
+}
+
+.wrapper.active-popup {
+    transform: scale(1);
+}
+
+.wrapper.active {
+    height: 520px;
+}
+.wrapper .form-box {
+    width: 100%;
+    padding: 40px;
+    
+}
+
+.wrapper .form-box.login {
+    transition: transform .18s ease;
+    transform: translateX(0);
+}
+
+.wrapper.active .form-box.login {
+    transition: none;
+    transform: translateX(-400px);
+}
+
+.wrapper .form-box.register {
+    position: absolute;
+    transition: none;
+    transform: translateX(400px);
+
+}
+
+.wrapper.active .form-box.register {
+    transition: transform .18s ease;
+    transform: translateX(0);
+}
+
+.wrapper .icon-close-login {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 45px;
+    height: 45px;
+    background: white;
+    font-size: 2em;
+    color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom-left-radius: 20px;
+    cursor: pointer;
+    z-index: 1;
+
+}
+
+.form-box h2 {
+    font-size: 2em;
+    color: white;
+    text-align: center;
+    
+}
+
+.input-box {
+    position: relative;
+    width: 100%;
+    height: 50px;
+    border-bottom: 2px solid #ffffff;
+    margin: 30px 0;
+}
+
+.input-box label {
+    position: absolute;/* Posicionamiento absoluto para superponerlo sobre el campo */
+    top: 50%;/* Coloca la etiqueta en la parte superior del campo */
+    left: 5px;
+    transform: translateY(-50%);
+    font-size: 1em;/* Ajusta el tamaño del texto según sea necesario */
+    color: white;
+    font-weight: 500;/*para el grosor de la letra adecuado*/
+    pointer-events: none;
+    transition: .5s;
+}
+
+.input-box input:focus~label,
+.input-box input:valid~label {
+    top: -5px;
+}
+
+.input-box input {
+    width: 100%; /* Ajusta el ancho para dejar espacio para el icono */
+    height: 100%;
+    background: transparent;
+    border: none;
+    outline: none;
+    font-size: 1em;
+    color: white;
+    font-weight: 600;/*para el grosor de la letra adecuado*/
+    padding: 0 35px 0 5px;
+
+}
+
+.username-icon ion-icon,
+.email-icon ion-icon,
+.password-icon ion-icon {
+    font-size: 1em; /* Utiliza el tamaño del texto del campo */
+}
+
+.input-box .iconss {
+    position: absolute;
+    right: 8px;
+    font-size: 1.2em;/* Utiliza el tamaño del texto del campo */
+    color: white;
+    line-height: 57px;
+
+}
+
+.remember-forgot {
+    font-size: .9em;
+    color: white;
+    font-weight: 500;/*para el grosor de la letra adecuado*/
+    margin: -15px 0 15px;
+    display: flex;
+    justify-content: space-between;
+    
+}
+
+.remember-forgot label input {
+    accent-color: white;
+    margin-right: 3px;
+}
+
+.remember-forgot label {
+    color: white;
+}
+
+.remember-forgot a {
+    color: white;
+    text-decoration: none;
+}
+
+.remember-forgot a:hover{
+    text-decoration: underline;
+}
+
+.btn-logreg {
+    width: 100%;
+    height: 45px;
+    background: white;
+    border: none;
+    outline: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 1em;
+    color: black;
+    font-weight: 500;/*para el grosor de la letra adecuado*/
+}
+
+.login-register {
+    font-size: .9em;
+    color: white;
+    text-align: center;
+    font-weight: 500;/*para el grosor de la letra adecuado*/
+    margin: 25px 0 10px;
+}
+
+.login-register p a {
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+
+}
+
+.login-register p a:hover {
+    text-decoration: underline;
+}
+
+.login-register p {
+    color: white;
+    
+}
+
+.login-register a {
+    color: white;
+}
+
+
+
+
+
+
+
+
+/* Estilos para dispositivos con un ancho máximo de 768px (típicamente tabletas) */
+@media only screen and (max-width: 991px) {
+    
+}
+
+/* Estilos para dispositivos con un ancho máximo de 480px (típicamente smartphones) */
+@media only screen and (max-width: 480px) {
+    body {
+        margin-left: 0; /* Reinicia el margen izquierdo para dispositivos móviles */
+    }
+    .btnMenu-popup {
+        position: absolute; /* O position: absolute; dependiendo de tu diseño */
+        top: 2px; /* Cambia este valor para ajustar la posición vertical */
+        left: 0; /* Cambia este valor para ajustar la posición horizontal */
+        width: 30px;
+        height: 30px;
+        background: transparent;
+        border: 2px solid white;
+        border-radius: 6px;
+        cursor: pointer;
+        color: white;
+        margin-top: 28px;
+        margin-left: 10px;
+        transition: .5s;
+        z-index: 1;
+    }
+    
+    .btnMenu-popup:hover {
+        background: white;
+        color: rgb(255, 255, 255);
+    
+    }
+    
+    .btnMenu svg{
+        width: 20px;
+        height: 20px;
+    }
+    .buttom-menu-icon{/*ICONO DE MENU*/
+        stroke: #f9f8f8;
+    }
+    
+    nav {
+        top: 25px;
+        left: 5px;
+        width: 90px; /* Ancho reducido para el menú en dispositivos móviles */
+        height: 95%;
+        bottom: 0;
+        box-shadow: 0 20px 60px rgba(0, 0, 0, 0.1);
+        transition: none;
+        overflow-y: none;
+        z-index: 1;
+    }
+
+    .nav.active {
+        height: 520px;
+    }
+    
+    nav:hover {
+        width: 220px;
+        height: 430px;
+        transition: none;
+    }
+
+    .menu .icon-close-menu{
+        display: flex;
+        color: white;
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 35px;
+        height: 35px;
+        background: rgb(0, 0, 0);
+        font-size: 1em;
+        color: white;
+        justify-content: center;
+        align-items: center;
+        border-bottom-left-radius: 15px;
+        cursor: pointer;
+        z-index: 1;
+    }
+    .menu{/*tamaño reducido del nav*/
+        display: none;/* Ocultar el menú por defecto */
+        width: 220px;
+        height: 430px;
+    }
+
+    .menu.show-menu {
+        display: block; /* Mostrar el menú cuando tiene la clase 'show-menu' */
+    }
+
+    .menu .nav-item {
+        font-size: 14px; /* Tamaño de fuente reducido para dispositivos móviles */
+    }
+    
+    .menu .icon svg {
+        width: 37px;
+        height: 36px; /* Tamaño reducido para los iconos en dispositivos móviles */
+    }
+
+    .icon{/*caracteristicas generales de los icon*/
+        display: inline-flex;
+        align-items: center;
+        margin-right: 10px; /* Agrega un margen entre el icono y el texto */
+    }
+
+    .icon span {
+        font-weight: bold;/*para el grosor de la letra adecuado*/
+        font-size: 18px;
+        text-transform: uppercase;
+    }
+
+    .fas {/*estilos para el texto alado de los iconos del menu*/
+        
+        padding-left: 20px;/*espaciado de los iconos y el nav*/
+    }
+
+    /*-----------------------------ESTILOS DEL ENCABEZADO DE LA PAGINA-----------------------------------------------*/
+    header {/*estilos para el header (se aplica de forma global)*/
+        
+        display: flex;
+        padding: 20px 40px;/*ajusta el relleno segun sea necesario*/
+    }
+
+    main{/*estilos para el main (se aplica de forma global)*/
+        padding: 20px 40px;/*ajusta el relleno segun sea necesario*/
+    }
+
+    .container-title{
+        font-size: 15px;
+        padding: 10px;
+    }
+
+    .container-subtitle h2 {
+        font-size: 1.2em;
+    }
+
+    /*---------------------------Corresponde a los estilos de los videos-----------------------------------------------------------------------------------------------------*/
+
+    .container-title h2 {
+        padding: 0;
+        font-size: 15px;
+    }
+    .video-container{
+        padding-top: 0px;
+        overflow-x: scroll;
+        overflow-y: hidden;
+        white-space: nowrap;
+        width: 100%;
+        margin-bottom: 20px; /* Esto es opcional, ajusta el margen según tus necesidades */
+    }
+    
+    .container-videos{
+        overflow-y: hidden; /* Oculta el desplazamiento vertical */
+        width: 343px;
+        display: inline-block;
+        margin-right: 20px;
+    }
+    .container-videos iframe{
+        width: 150px;
+        height: 78px;
+    }
+    
+    /* Estilos para centrar horizontalmente el cuerpo solo en redes.html */
+
+    
+
+    /* Estilos para la página de redes sociales */
+    .container-enlaces {
+        padding: 50px;
+    }
+    
+    .container-enlaces a {
+        width: 100%; /* Toma el ancho completo de su contenedor */
+        text-align: center; /* Centra el contenido horizontalmente */
+    }
+    
+    .container-enlaces a img{
+        max-width: 70px;/*tamaño maximo para los logos de las redes sociales*/
+        height: auto;/*alto automatico wn relacion con el max-width*/
+    }
+
+    /*-----------------------------PERTENECE A LOS ESTILOS DE SOBRE MI-------------------------------------------------------------------------------------------------*/
+
+    .container-date{
+        grid-template-columns: repeat(2, 1fr);/*aqui se ajusta la cantidad de productos que se colocan por fila*/
+        white-space: nowrap;/*para que no de saltos de linea donde no debe haber*/
+        color: white;
+        display: grid;
+        align-items: center;
+        margin-left: 10px;
+        padding-top: 0px;
+    }
+    .container-date b{
+        font-size: 10px;
+        padding: 0px;
+        top: 85px;
+    }
+
+    .container-bio {
+        text-align: justify;
+        font-size: 10px;
+        left: 0px; /* Lo coloca en el lado izquierdo de la pantalla */
+        width: 349px; /* Ajusta el ancho al 100% del viewport */
+        height: 550px;
+        max-width: 100%; /* Establece el ancho máximo del contenedor */
+        overflow: hidden; /* Evita que el contenido se desborde */
+    }
+    
+    .container-bio p {
+        white-space: pre-line; /* Permite que el texto se envuelva automáticamente */
+    }
+
+    /*-----------------------------PERTENECE A LOS ESTILOS DE LA TIENDA------------------------------------------------------------------------------------------------*/
+
+
+    /*------------------------------PERTENCE A LOS ESTILOS DEL BUSCADOR------------------------------------------------------------------------------------------------*/
+
+    
+    /* Estilos generales para el buscador */
+    .container-search{
+        top: 0px;
+        right: 0px;
+        left: 14px;
+        width: 160px;
+        height: 25px;
+        
+    }
+
+    /* Estilos para el input */
+    .container-search input[type="text"] {
+        background-color: transparent; /* Hace que el fondo del input sea transparente */
+        padding-left: 5px;
+        border: 5px; /* Elimina el borde predeterminado del input */
+        width: 100%; /* Define el ancho del input */
+        color: white; /*Define el color del texto dentro del search*/
+        font-size: .6em; /*Define el tamaño del texto dentro del search*/
+        outline: none; /* Elimina el contorno al enfocar el input */
+    }
+
+    /* Estilos para el botón */
+    .container-search .btn-search {
+        width: 15px;
+        height: 15px;
+        padding: 0px;
+    }
+
+    /* Estilos para el icono dentro del botón */
+    .container-search .search-icon {
+        width: 10px; /* Define el ancho del icono */
+        height: 10px; /* Define la altura del icono */
+    }
+
+    /*---------------------------------ESTILOS PARA EL CARRITO---------------------------------------------------------------------------------*/
+
+    .container-icon {
+        position: relative;
+    }
+
+    .icon-cart {/*estilos para el icono del carrito*/
+        z-index: 1; /*asegura que no se quedara por debajode ningun otro elemento de la pagina*/
+        width: 45px;
+        height: 45px;
+        stroke: white;
+        cursor: pointer;
+        /* Aquí es donde puedes ajustar las propiedades de posición */
+        position: fixed; /* O position: absolute; dependiendo de tu diseño */
+        top: 760px; /* Cambia este valor para ajustar la posición vertical */
+        right: 25px; /* Cambia este valor para ajustar la posición horizontal */
+        background-color: black;/*color del circulo que contiene el carrito*/
+        background-size: auto;
+        border-radius: 50%;/*para hacerlo redondo el carrito*/
+
+    }
+
+    .count-products {/*pertenece al contador de productos del carrito*/
+        top: 750px;/*desplaza el contador de arriba a abajo*/
+        right: 18px;/*desplaza el contador de derecha a izquierda*/
+        background-color: #f90000;/*color del circulo que contiene el numero del contador*/
+        width: 18px;/*ancho del contador*/
+        height: 18px;/*alto del contador*/
+    }
+
+    #contador-productos {/*pertenece al contador del carrito*/
+        font-size: 12px;/*tamaño del texto del numero del contador del carrito*/
+    }
+
+    /* Estilo para el contenedor de productos del carrito */
+    .container-cart-products {
+        position: center;
+        top: 115px;/* Coloca el contenido del carrito justo debajo del icono */
+        right: 28px;/*Desplaza el contenido delcarrito de derecha a izquierda*/
+        width: 260px;/* Ajusta el ancho del carrito según sea necesario */
+        background-color: white; /* Cambia el color de fondo según tu diseño */
+        border-radius: 10px; /* Redondea las esquinas */
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.20); /* Añade sombra para resaltar */
+        display: none; /* Oculta el carrito por defecto */
+        z-index: 1; /* Asegura que esté por encima del contenido */
+        overflow-y: auto; /* Habilitar desplazamiento vertical */
+        max-height: calc(100vh - 200px); /* Establecer una altura máxima para el desplazamiento */
+    }
+
+    /*--------------------------Estilo para los productos en el carrito--------------------------------------------------------------------------------*/
+    .cart-product {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 20px;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.20);
+    }
+
+    .icon-close {
+        display: flex;
+        position: absolute;
+        top: 5px;
+        right: 5px;
+        width: 20px;
+        height: 20px;
+        background-color: black;/*color del circulo que contiene el numero del contador*/
+        width: 25px;/*ancho del contador*/
+        height: 25px;/*alto del contador*/
+        border-radius: 50%;/*para hacerlo circular*/
+        cursor: pointer;
+    }
+
+    .info-cart-product {
+        color: black;
+        display: inline-block;
+        flex-direction: column;
+        text-align: left;
+    }
+
+    .icon-delete {
+        color: black;
+    }
+
+    .cantidad-producto-carrito {
+        
+        font-size: 20px;
+    }
+
+    .titulo-producto-carrito {
+        font-size: 12px;
+        font-weight: 850;/*para el grosor de la letra adecuado*/
+
+    }
+
+    .precio-producto-carrito {
+        font-size: 16px;
+    }
+
+    .icon-delete {
+        width: 15px;
+        height: 15px;
+        cursor: pointer;
+    }
+
+    .cart-total {
+        color: black;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 20px;
+    }
+
+    .cart-total h3 {
+        font-size: 18px;
+        font-weight: bold;/*para el grosor de la letra adecuado*/
+    }
+
+    .total-pagar {
+        font-size: 18px;
+        font-weight: bold;/*para el grosor de la letra adecuado*/
+    }
+
+    .icon-close:hover {
+        stroke: rgb(0, 0, 0);
+    }
+
+    /*-------------------------ESTILOS DE LOS PRODUCTOS------------------------------------------------------------------------------------*/
+
+    /*sombra para resaltar los productos*/
+    .item:hover {
+        box-shadow: 0 20px 30px rgba(0, 0, 0, 0.65);
+    }
+
+    .container-items {
+        overflow-y: hidden; /* Oculta el desplazamiento vertical */
+        width: 343px;
+        height: 240px;
+        gap: 15px;/*espacio entre los productos*/
+        margin-left: 0px; /* Ancho espacio entre el nav y los productos*/
+        padding-top: 0px; /* Espacio para compensar la altura del nav */
+    }
+
+    .item {
+        width: 120px;
+        height: 210px;
+        border-radius: 15px;/*para dar un borde redondeado a nuestro contenedor de imagenes*/
+    }
+
+    img {
+        
+        max-width: 100%;
+    }
+
+    .item img {
+        width: 120px;
+        height: 150px;
+        align-items: center;
+        object-fit: cover;/*lo ajustamos para que no se desborde*/
+        transition: all .5s;
+    }
+
+
+    .item:hover img {
+        transform: scale(1.2);/* Zoom que se le hara al item o imagen del produto al poner el puntero encima*/
+    }
+
+    .info-product {
+        flex-direction: column;/* Lo acomoda el texto en columnas */
+        gap: 5px; /* Espacio entre el titulo del producto, el precio, y el boton de añadir */
+    }
+
+    /*color del texto del nombre del producto*/
+    .info-product h2{
+        white-space: nowrap; /* Evita saltos de línea automáticos */
+        font-size: 10px; /* Tamaño de letra*/
+    }
+
+    .price {
+        font-size: 12px; /*tamaño de letra*/
+        font-weight: 900px;
+    }
+
+
+    .info-product button {
+        padding: 1;
+        width: 120px;
+        height: auto;
+    }
+
+
+
+
+
+
+
+    /*--------------------------------------------------ESTILOS PARA INICIO DE SECION--------------------------------------------------------------------------*/
+
+
+
+
+
+
+
+    .btnLogin-popup {
+        top: 30px; /* Cambia este valor para ajustar la posición vertical */
+        right: 25px; /* Cambia este valor para ajustar la posición horizontal */
+        width: 60px;
+        height: 30px;
+        font-size: 0.7em;
+
+    }
+
+    .wrapper {
+        top: auto;
+        right: 15%;
+        width: 300px;
+        height: 450px;
+
+    }
+
+    .form-box h2 {
+        font-size: 2em;
+        
+    }
+
+    .remember-forgot {
+        font-size: .7em;
+        
+    }
+
+    .btn-logreg {
+        width: 100%;
+        height: 45px;
+        border-radius: 10px;
+        font-size: 1em;
+        font-weight: 500;/*para el grosor de la letra adecuado*/
+    }
+
+    .login-register {
+        font-size: .9em;
+        font-weight: 500;/*para el grosor de la letra adecuado*/
+        margin: 25px 0 10px;
+    }
+
+}
+
+/* Estilos para dispositivos con un ancho máximo de 320px (típicamente smartphones en orientación vertical) */
+@media only screen and (max-width: 320px) {
+    /* Estilos específicos para smartphones en orientación vertical */
+}

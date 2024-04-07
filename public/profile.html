@@ -6,27 +6,19 @@
     <meta http-equiv="X-UA-Compatible"content="IE=edge">
     <meta name="robots" content="index">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Tienda</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Perfil</title>
+    <link rel="stylesheet" href="css\styles.css">
 </head>
 <body>
-
-    <header>
+    <header><!--seccion para el titulo principal y el menu de navegacion
+    -->
         <!--div para nuestro titulo o encabezado de pagina-->
         <div class="container-title">
-            <h1>Tienda.</h1>
+            <h1>Perfil.</h1>
             <div class="btnMenu">
                 <button class="btnMenu-popup">
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class=".buttom-menu-icon">
                         <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 5.25h16.5m-16.5 4.5h16.5m-16.5 4.5h16.5m-16.5 4.5h16.5" />
-                    </svg>
-                </button>
-            </div>
-            <div class="container-search">
-                <input type="text" placeholder="Buscar...">
-                <button class="btn-search">
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="search-icon">
-                        <path stroke-linecap="round" stroke-linejoin="round" d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z" />
                     </svg>
                 </button>
             </div>
@@ -132,73 +124,9 @@
                         
             </nav>
         </div>
-
-        <div class="container-icon">
-
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="icon-cart">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 3h1.386c.51 0 .955.343 1.087.835l.383 1.437M7.5 14.25a3 3 0 0 0-3 3h15.75m-12.75-3h11.218c1.121-2.3 2.1-4.684 2.924-7.138a60.114 60.114 0 0 0-16.536-1.84M7.5 14.25 5.106 5.272M6 20.25a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Zm12.75 0a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Z" />
-              </svg>
-              
-              <!--utilizamos el svg llamando a un icono externo de la pagina heroicons-->
-            <div class="count-products">
-                <span id="contador-productos">
-                    0
-                </span>
-            </div>
-
-            <div class="container-cart-products hidden-cart">
-                <div class="option-icon-close">
-                    <svg
-                            xmlns="http://www.w3.org/2000/svg"
-                            fill="none"
-                            viewBox="0 0 24 24"
-                            stroke-width="1.5"
-                            stroke="currentColor"
-                            class="icon-close"
-                        >
-                            <path
-                                stroke-linecap="round"
-                                stroke-linejoin="round"
-                                d="M6 18L18 6M6 6l12 12"
-                            />
-                        </svg>
-                </div>
-                <div class="cart-empty hidden">
-                    <p>El carrito esta vacio</p>
-                </div>
-                <div class="row-product hidden">
-                    <div class="cart-product">
-                        <div class="info-cart-product">
-                            <span class="cantidad-producto-carrito"></span>
-                            <span class="titulo-producto-carrito"></span>
-                            <span class="precio-producto-carrito"></span>
-                        </div>
-                        <svg
-                            xmlns="http://www.w3.org/2000/svg"
-                            fill="none"
-                            viewBox="0 0 24 24"
-                            stroke-width="1.5"
-                            stroke="currentColor"
-                            class="icon-delete"
-                        >
-                            <path
-                                stroke-linecap="round"
-                                stroke-linejoin="round"
-                                d="M6 18L18 6M6 6l12 12"
-                            />
-                        </svg>
-                    </div>
-                </div>    
-                <div class="cart-total hidden">
-                    <h3>Total:</h3>
-                    <span class="total-pagar"> </span>
-                </div>
-            </div>
-        </div>    
-            
     </header>
-
     <main>
+        
         <!--Pertenece al boton de login-->
         <div class="btnLogin">
             <button class="btnLogin-popup">login</button>
@@ -277,121 +205,10 @@
                 </form>
             </div>
         </div>
-        <div class="container-items">
-        
-            <div class="item">
-                <figure>
-                    <img
-                        src="imagenes/productos/playeras/playera1.png"
-                        alt="producto"
-                    />
-                    <!--Llamamos a la imagen del producto de forma local-->
-                    
-                </figure>
-                <!--Creamos un figure para poder llamar a nuestra imagen del producto-->
-                <div class="info-product">
-                    <h2>Playera negra</h2><!--Utilizamos un h2 para colocar un segundo titulo donde pondremos en nombre del producto-->
-                    <p class="price">$28</p><!--Utilizamos un p de tipo class para colocar el precio de nuestro producto -->
-                    <button class="add-to-cart" data-id="1">Añadir al carrito</button><!--Por ultimo añadimos un boton con texto dentro haciendo uso de la funcion "button"-->
 
-                </div>
-                <!--Creamos una clase para colocar la informacion de nuestro producto-->
-            </div>
-            <div class="item">
-                <figure>
-                    <img
-                        src="imagenes/productos/playeras/playera2.png"
-                        alt="producto"
-                    />
-                    
-                </figure>
-                <div class="info-product">
-                    <h2>Playera gris</h2>
-                    <p class="price">$28</p>
-                    <button class="add-to-cart" data-id="2">Añadir al carrito</button>
-
-                </div>
-            </div>
-            <div class="item">
-                <figure>
-                    <img
-                        src="imagenes/productos/playeras/playera3.png"
-                        alt="producto"
-                    />
-                    
-                </figure>
-                <div class="info-product">
-                    <h2>Playera blanca</h2>
-                    <p class="price">$28</p>
-                    <button class="add-to-cart" data-id="3">Añadir al carrito</button>
-
-                </div>
-            </div>
-            <div class="item">
-                <figure>
-                    <img
-                        src="imagenes/productos/playeras/playera4.png"
-                        alt="producto"
-                    />
-                    
-                </figure>
-                <div class="info-product">
-                    <h2>Playera azul</h2>
-                    <p class="price">$28</p>
-                    <button class="add-to-cart" data-id="4">Añadir al carrito</button>
-
-                </div>
-            </div>
-            <div class="item">
-                <figure>
-                    <img
-                        src="imagenes/productos/playeras/playera5.png"
-                        alt="producto"
-                    />
-                    
-                </figure>
-                <div class="info-product">
-                    <h2>Playera roja</h2>
-                    <p class="price">$28</p>
-                    <button class="add-to-cart" data-id="5">Añadir al carrito</button>
-
-                </div>
-            </div>
-            <div class="item">
-                <figure>
-                    <img
-                        src="imagenes/productos/playeras/playera6.png"
-                        alt="producto"
-                    />
-                    
-                </figure>
-                <div class="info-product">
-                    <h2>Playera morada</h2>
-                    <p class="price">$28</p>
-                    <button class="add-to-cart" data-id="6">Añadir al carrito</button>
-
-                </div>
-            </div>
-            <div class="item">
-                <figure>
-                    <img
-                        src="imagenes/productos/playeras/playera7.png"
-                        alt="producto"
-                    />
-                    
-                </figure>
-                <div class="info-product">
-                    <h2>Playera verde</h2>
-                    <p class="price">$28</p>
-                    <button class="add-to-cart" data-id="7">Añadir al carrito</button>
-
-                </div>
-            </div>
-        </div>
-        <!--Creamos una nueva clase para los productos-->
     </main>
-
-    <script src="script.js"></script>
+    
+    <script src="js\script.js"></script>
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 </body>
