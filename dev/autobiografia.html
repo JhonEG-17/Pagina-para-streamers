@@ -1,20 +1,16 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="author" content="Jhonatan Espinal Garcia">
-    <meta http-equiv="X-UA-Compatible"content="IE=edge">
-    <meta name="robots" content="index">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Perfil</title>
-    <link rel="stylesheet" href="..\css\styles.css">
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Sobre Mi</title>
+	<link rel="stylesheet" href="css\styles.css">
 </head>
 <body>
-    <header><!--seccion para el titulo principal y el menu de navegacion
-    -->
+	<header>
         <!--div para nuestro titulo o encabezado de pagina-->
         <div class="container-title">
-            <h1>Perfil.</h1>
+            <h1>Todo Sobre mi.</h1>
             <div class="btnMenu">
                 <button class="btnMenu-popup">
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class=".buttom-menu-icon">
@@ -82,19 +78,6 @@
                     </li>
         
                     <li>
-                        <a href="wallet.html">
-                            
-                            <i class="icon fas fa-wallet">
-                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="wallet-icon">
-                                    <path stroke-linecap="round" stroke-linejoin="round" d="M21 12a2.25 2.25 0 0 0-2.25-2.25H15a3 3 0 1 1-6 0H5.25A2.25 2.25 0 0 0 3 12m18 0v6a2.25 2.25 0 0 1-2.25 2.25H5.25A2.25 2.25 0 0 1 3 18v-6m18 0V9M3 12V9m18 0a2.25 2.25 0 0 0-2.25-2.25H5.25A2.25 2.25 0 0 0 3 9m18 0V6a2.25 2.25 0 0 0-2.25-2.25H5.25A2.25 2.25 0 0 0 3 6v3" />
-                                  </svg>
-                                  
-                                <span class="nav-item">Cartera</span>
-                            </i>
-                        </a>
-                    </li>
-        
-                    <li>
                         <a href="profile.html">
                             
                             <i class="icon fas fa-user">
@@ -106,18 +89,7 @@
                             </i>
                         </a>
                     </li>
-                    <li>
-                        <a href="logout.html">
-                            
-                            <i class="icon fas fa-logout">
-                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="logout-icon">
-                                    <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 9V5.25A2.25 2.25 0 0 0 13.5 3h-6a2.25 2.25 0 0 0-2.25 2.25v13.5A2.25 2.25 0 0 0 7.5 21h6a2.25 2.25 0 0 0 2.25-2.25V15m3 0 3-3m0 0-3-3m3 3H9" />
-                                  </svg>
-                                  
-                                <span class="nav-item">Logout</span>
-                            </i>
-                        </a>
-                    </li>
+                    
                     <!--esto es nuestro menu de navegacion en la pagina utilizando "href" para poder desplazarnos entre paginas facilmente-->
                 
                 </ul>
@@ -126,7 +98,6 @@
         </div>
     </header>
     <main>
-        
         <!--Pertenece al boton de login-->
         <div class="btnLogin">
             <button class="btnLogin-popup">login</button>
@@ -205,10 +176,47 @@
                 </form>
             </div>
         </div>
-
+        <!--Creamos este "div" para poder colocar los datos basicos de la persona-->
+        <div class="container-date">
+            
+            <b>Edad: 21<br>Nacionalidad: Mexicano<br>Nombre real: (Nombre Completo)</b><br><!--Mediante un "<b>" colocamos en negritas para resaltar el texto que indica la informacion-->
+            <!--Utilizamos "<br>" para dar saltos de linea y estructurar mejor la informacion-->
+            
+        </div>
+        <div class="container-bio">
+            
+            <p>    
+                Hola mi nombre es (Nombre), soy un joven streamer y desarrollador de (Edad) años.<br>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad modi perferendis molestiae expedita<br>
+                similique ea cum et voluptate, atque obcaecati esse iusto repudiandae, fuga possimus fugiat, eaque amet beatae sed.<br>
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolore, velit. Harum similique pariatur assumenda maiores fugit.<br>
+                Laborum perspiciatis quaerat voluptatem dolores? Ipsum enim laboriosam maiores sapiente quam. Possimus, quasi tempora.<br>
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ad cupiditate porro odio voluptates iusto molestiae,<br>
+                quae odit debitis architecto quia, accusantium quasi? Assumenda ea et earum cupiditate nesciunt a fuga.<br>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque libero autem distinctio aliquam.<br>
+                Deleniti cum deserunt quae, amet animi quasi, ducimus enim, voluptatibus eius excepturi consequuntur.<br>
+                Distinctio blanditiis iure harum?.
+            </p><!--Creamos este "<p>" para poder colocar la biografia del streamer-->
+            
+        </div>
+        <div class="buttom-exit">
+            <button class="exit-account">
+                <a href="logout.html">
+                
+                    <i class="icon-logout">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="logout-icon">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 9V5.25A2.25 2.25 0 0 0 13.5 3h-6a2.25 2.25 0 0 0-2.25 2.25v13.5A2.25 2.25 0 0 0 7.5 21h6a2.25 2.25 0 0 0 2.25-2.25V15m3 0 3-3m0 0-3-3m3 3H9" />
+                          </svg>
+                          
+                        <span class="Sub-nav-item">Logout</span>
+                    </i>
+                </a>
+            </button>
+            
+        </div>
     </main>
-    
-    <script src="..\js\script.js"></script>
+	
+    <script src="js\script.js"></script>
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 </body>

@@ -1,20 +1,17 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="author" content="Jhonatan Espinal Garcia">
-    <meta http-equiv="X-UA-Compatible"content="IE=edge">
-    <meta name="robots" content="index">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Cartera</title>
-    <link rel="stylesheet" href="..\css\styles.css">
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Mis Redes</title>
+	<link rel="stylesheet" href="css\styles.css">
 </head>
-<body wallet>
-    <header><!--seccion para el titulo principal y el menu de navegacion
+<body >
+	<header><!--seccion para el titulo principal y el menu de navegacion
     -->
         <!--div para nuestro titulo o encabezado de pagina-->
         <div class="container-title">
-            <h1>Cartera</h1>
+            <h1>Redes Sociales.</h1>
             <div class="btnMenu">
                 <button class="btnMenu-popup">
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class=".buttom-menu-icon">
@@ -80,20 +77,7 @@
                             </i>
                         </a>
                     </li>
-        
-                    <li>
-                        <a href="wallet.html">
-                            
-                            <i class="icon fas fa-wallet">
-                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="wallet-icon">
-                                    <path stroke-linecap="round" stroke-linejoin="round" d="M21 12a2.25 2.25 0 0 0-2.25-2.25H15a3 3 0 1 1-6 0H5.25A2.25 2.25 0 0 0 3 12m18 0v6a2.25 2.25 0 0 1-2.25 2.25H5.25A2.25 2.25 0 0 1 3 18v-6m18 0V9M3 12V9m18 0a2.25 2.25 0 0 0-2.25-2.25H5.25A2.25 2.25 0 0 0 3 9m18 0V6a2.25 2.25 0 0 0-2.25-2.25H5.25A2.25 2.25 0 0 0 3 6v3" />
-                                  </svg>
-                                  
-                                <span class="nav-item">Cartera</span>
-                            </i>
-                        </a>
-                    </li>
-        
+
                     <li>
                         <a href="profile.html">
                             
@@ -106,18 +90,6 @@
                             </i>
                         </a>
                     </li>
-                    <li>
-                        <a href="logout.html">
-                            
-                            <i class="icon fas fa-logout">
-                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="logout-icon">
-                                    <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 9V5.25A2.25 2.25 0 0 0 13.5 3h-6a2.25 2.25 0 0 0-2.25 2.25v13.5A2.25 2.25 0 0 0 7.5 21h6a2.25 2.25 0 0 0 2.25-2.25V15m3 0 3-3m0 0-3-3m3 3H9" />
-                                  </svg>
-                                  
-                                <span class="nav-item">Logout</span>
-                            </i>
-                        </a>
-                    </li>
                     <!--esto es nuestro menu de navegacion en la pagina utilizando "href" para poder desplazarnos entre paginas facilmente-->
                 
                 </ul>
@@ -125,7 +97,7 @@
             </nav>
         </div>
     </header>
-    <main>
+	<main><!--seccion para el contenido de la pagina-->
         <!--Pertenece al boton de login-->
         <div class="btnLogin">
             <button class="btnLogin-popup">login</button>
@@ -204,9 +176,49 @@
                 </form>
             </div>
         </div>
-    </main>
+        
+        <div class="container-subtitle"><!--contenedor para el titulo-->
 
-    <script src="..\js\script.js"></script>
+            <h2>Conóceme y conéctate conmigo en mis distintas redes.</h2><!--Sub titulo-->
+            
+        </div>
+        <div class="container-enlaces"><!--contenedor para los enlaces-->
+
+            <a href="https://www.facebook.com/JhonEG17z" target="_blank"><img src="../assets/icons/redes sociales/facebook.png" alt="Facebook"></a>
+
+            <a href="https://www.instagram.com/jhoneg17" target="_blank"><img src="../assets/icons/redes sociales/instagram.png" alt="Instagram"></a>
+
+            <a href="https://www.youtube.com/@JhonEG17" target="_blank"><img src="../assets/icons/redes sociales/youtube.png" alt="YouTube"></a>
+
+            <a href="https://twitch.tv/JhonEG17" target="_blank"><img src="../assets/icons/redes sociales/twitch.png" alt="Twitch"></a>
+
+            <a href="https://www.tiktok.com/@jhon_eg17" target="_blank"><img src="../assets/icons/redes sociales/tiktok.png" alt="TikTok"></a>
+
+            <a href="https://twitter.com/JhonEG17" target="_blank"><img src="../assets/icons/redes sociales/x.png" alt="X"></a>
+
+            <a href="https://www.discord.gg/" target="_blank"><img src="../assets/icons/redes sociales/discord.png" alt="Discord"></a>
+
+
+        </div>
+        <div class="buttom-exit">
+            <button class="exit-account">
+                <a href="logout.html">
+                
+                    <i class="icon-logout">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="logout-icon">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 9V5.25A2.25 2.25 0 0 0 13.5 3h-6a2.25 2.25 0 0 0-2.25 2.25v13.5A2.25 2.25 0 0 0 7.5 21h6a2.25 2.25 0 0 0 2.25-2.25V15m3 0 3-3m0 0-3-3m3 3H9" />
+                          </svg>
+                          
+                        <span class="Sub-nav-item">Logout</span>
+                    </i>
+                </a>
+            </button>
+            
+        </div>
+    </main>
+	
+
+    <script src="js\script.js"></script>
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 </body>

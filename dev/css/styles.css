@@ -635,65 +635,84 @@ img {
 
 
 /*--------------------------------------------------ESTILOS PARA SETINGS PROFILE---------------------------------------------------------------------------*/
-
-.container-profile-setings {
-    align-items: center;
-    position: absolute;
-    top: 200px;
-    right: 400px;
+.conteiner-menu-config-options{
+    position: absolute; /* O position: absolute; dependiendo de tu diseño */
+    width: 1000px;
+    height: 500px;
     background: transparent;
-    width: 600px;
-    height: 600px;
-    border: 2px solid white;
-    border-radius: 15px;
-
-}
-
-.container-profile-setings button .direct-shopping{
-    text-align: center;
-    align-items: center;
-}
-.username {
-    margin: 30px;
-    font-size: 40px;
-    color: white;
-    text-align: center;
-
-}
-
-.tilte-pedidos {
-    text-align: right;
-    font-size: 30px;
-    color: white;
-
-}
-
-.direct-shopping {/*corresponde al boton de comienza a comprar*/
-    align-items: center;
-    text-align: center;
-    width: 400px;
-    height: 44px;
-    background: transparent;
-    border: 2px solid white;
-    outline: none;
+    border: 3px solid white;
     border-radius: 6px;
-    cursor: pointer;
-    color: white;
-    font-size: 20px;
-    font-weight: 700;/*para el grosor de la letra adecuado*/
+    color: rgb(255, 255, 255);
 }
 
-.direct-shopping:hover {/*corresponde a la animacion del boton de comienza a comprar*/
-    background: white;
-    color: black;
-
+.container-icon-options{
+    position: absolute;
+    top: 0px;
+    bottom: 0;
+    overflow: auto;
 }
 
-.setings a {
+.container-icon-options .profile-nav-item {
+    color: white;/*da el color negro al texto de aladoo de cada icono*/
+    display: inline-block; /* Mostrar en línea */
+    vertical-align: middle; /* Alinear verticalmente al centro */
+    font-weight: bold;
+    font-size: 18px;
+    text-transform: uppercase;
+    padding-left: 20px; /*espaciado de el texto con el icono*/
+}
+
+svg .icon-menu-profile{
+    display: table;/*dispone los elementos en forma de tabla*/
+    position: relative;
+    margin: 1px 1px 1px 0px;
+    width: 40px;
+    height: 40px;
     
-    color: white;
-    padding: 80px 200px 80px 50px;
+}
+.container-icon-options .icon-options {
+    display: flex; /* Cambiar a flex */
+    align-items: center; /* Alinear verticalmente al centro */
+    margin-bottom: 20px; /* Agrega un espacio de 20px hacia abajo */
+    margin-right: 10px; /* Opcional: Añadir margen entre el icono y el texto */
+}
 
+.container-icon-options .icon-options svg {
+    width: 40px;/*tamaño fijo para los iconos */
+    height: 40px;
+    color: white;/*color de cada icono utilizado para el menu de configuracion*/
+}
+
+.list-options-menu li button{
+    background-color: transparent;
+    
+}
+
+.list-options-menu li button:hover{
+    cursor: pointer;
+    border-color: white;
+
+}
+.config-sub-options{
+    position: absolute;
+    left: 350px;
+    overflow: auto;
+}
+.buttom-exit{
+    background-color: transparent;
+
+}
+.exit-account{
+    position: fixed;
+    background-color: transparent;
+
+}
+.icon-logout{
+    color: white;
+    align-items: center;
+}
+.logout-icon{
+    color: white;
 }
 
 
@@ -931,6 +950,15 @@ img {
 
 .login-register a {
     color: white;
+}
+
+/*---------------------------------boton de exit-----------------*/
+
+.buttom-exit{
+    background: transparent;
+    position: absolute;
+    top: 620px;
+    left: 20px;
 }
 
 
