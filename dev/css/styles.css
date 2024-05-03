@@ -3,13 +3,13 @@
 *::after,
 *::before,
 * {
-    margin: 0;
-    padding: 0;
+    margin: 0;/*se elimina cualquier margen que tenga por defecto el navegador*/
+    padding: 0;/*se elimina cualquier espaciado que tenga por defecto el navegador*/
     outline: none;
-    border: none;
+    border: none;/*se eliminan los bordes por defecto*/
     text-decoration: none;
     box-sizing: border-box;
-    font-family: "Poppins", sans-serif;
+    font-family: "Poppins", sans-serif;/*se establece el tipo de letra que tendra la paginapor defecto*/
 }
 
 
@@ -20,13 +20,14 @@ body {
     background-position: center; /* Para centrar la imagen en el fondo */
     background-attachment: fixed; /* Fondo estático */
     /*resto de elementos de la pagina*/
-    margin: 0;
-    padding: 0;
-    max-width: 1200px;
-    font-family: 'Lato', sans-serif;
-    color: white;
+    margin: 0;/*se elimina cualquier margen que tenga por defecto el navegador*/
+    padding: 0;/*se elimina cualquier espaciado que tenga por defecto el navegador*/
+    width: 100%;/*se estabele que usara el maximo del ancho de la pantalla*/
+    height: 100%;/*se estabele que usara el maximo del alto de la pantalla*/
+    font-family: 'Lato', sans-serif;/*tipo de letra por defecto*/
+    color: white;/*color del texto por defecto*/
     background-color: #000;
-    margin-left: 70px; /* Ancho de la barra de navegación */
+   /* margin-left: 70px; /* Ancho de la barra de navegación */
 
 }
 
@@ -168,554 +169,6 @@ nav:hover {
     
     padding-left: 20px;/*espaciado de los iconos y el nav*/
 }
-
-/*-----------------------------ESTILOS DEL ENCABEZADO DE LA PAGINA-----------------------------------------------*/
-header {/*estilos para el header (se aplica de forma global)*/
-    
-    display: flex;
-    padding: 20px 40px;/*ajusta el relleno segun sea necesario*/
-}
-
-main{/*estilos para el main (se aplica de forma global)*/
-    padding: 20px 40px;/*ajusta el relleno segun sea necesario*/
-    
-}
-
-.container-title{
-    white-space: nowrap;
-    display: flex;
-    align-items: center;
-    font-size: 45px;
-    padding: 10px;
-    z-index: 1; /*asegura que no se quedara por debajode ningun otro elemento de la pagina*/
-}
-
-h1{
-    color: rgb(255, 255, 255);
-}
-
-
-
-
-
-
-
-/*-----------------------------PERTENECE A LOS ESTILOS DEL INICIO----------------------------------------------------------------------------------------------------*/
-
-.container-subtitle h2{
-    text-align: center;
-    /*white-space: nowrap;*/
-    color: white;
-    font-size: 3em;
-}
-.container-subtitle b{
-    white-space: nowrap;
-    color: white;
-}
-.container-text p{
-    white-space: nowrap;
-    color: white;
-}
-
-/*---------------------------Corresponde a los estilos del bloque de left 4 dead 2----------------------------------------------------------------------------------*/
-.container-title h2{
-    /*white-space: nowrap;*/
-    color: white;
-    display: flex;
-    font-size: 30px;
-    padding: 15px;
-}
-
-.video-container{
-    padding-top: 15px;
-    overflow-x: scroll;
-    overflow-y: hidden;
-    white-space: nowrap;
-    width: 100%;
-    /*margin-bottom: 20px; /* Esto es opcional, ajusta el margen según tus necesidades */
-}
-
-.container-videos{
-    display: inline-block;
-    margin-right: 20px;
-}
-
-
-
-
-
-
-
-
-/*-----------------------------PERTENECE A LOS ESTILOS DE REDES SOCIALES------------------------------------------------------------------------------------------------*/
-
-
-
-
-
-
-  
-/* Estilos para la página de redes sociales */
-.container-enlaces {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr); /* 3 columnas de tamaño igual */
-    grid-gap: 20px; /* Espacio entre las imágenes */
-    max-width: 450px; /*Ajusta el ancho maximo del contenedor */
-    margin: 0 auto; /* Centra horizontalmente el contenedor */
-}
-  
-.container-enlaces a {
-
-    width: 100%; /* Toma el ancho completo de su contenedor */
-    text-align: center; /* Centra el contenido horizontalmente */
-}
-
-.container-enlaces a img{
-    max-width: 150px;/*tamaño maximo para los logos de las redes sociales*/
-    height: auto;/*alto automatico wn relacion con el max-width*/
-}
-  
-.container-enlaces a:nth-child(1) img {
-    filter: drop-shadow(5px 5px 5px rgba(59, 89, 152, 0.8)); /* Sombra azul para Facebook */
-}
-  
-.container-enlaces a:nth-child(2) img {
-    filter: drop-shadow(5px 5px 5px rgba(219, 72, 129, 0.8)); /* Sombra rosa-morada para Instagram */
-}
-
-.container-enlaces a:nth-child(3) img {
-    filter: drop-shadow(5px 5px 5px rgba(255, 0, 0, 0.8)); /* Sombra roja para youtube */
-}
-
-.container-enlaces a:nth-child(4) img {
-    filter: drop-shadow(5px 5px 5px rgba(187, 0, 255, 0.8)); /* Sombra morada para twitch */
-}
-
-.container-enlaces a:nth-child(5) img {
-    filter: drop-shadow(5px 5px 5px rgba(63, 133, 255, 0.8)); /* Sombra azul para tiktok */
-}
-
-.container-enlaces a:nth-child(6) img {
-    filter: drop-shadow(5px 5px 5px rgba(255, 255, 255, 0.8)); /* Sombra blanca para x */
-}
-
-.container-enlaces a:nth-child(7) img {
-    filter: drop-shadow(5px 5px 5px rgba(83, 67, 255, 0.8)); /* Sombra morada-azul para discord */
-    /*max-width: 100%;*/
-}
-
-
-
-
-
-/*-----------------------------PERTENECE A LOS ESTILOS DE SOBRE MI-------------------------------------------------------------------------------------------------*/
-
-
-
-
-
-
-
-
-.container-date{
-    grid-template-columns: repeat(2, 1fr);/*aqui se ajusta la cantidad de productos que se colocan por fila*/
-    white-space: nowrap;/*para que no de saltos de linea donde no debe haber*/
-    color: white;
-    display: grid;
-    align-items: center;
-    margin-left: 10px;
-    padding-top: 10px;
-}
-
-.container-date b{
-    position: fixed;
-    padding: 10px;
-    /*grid-template-columns: repeat(1, 1fr);/*aqui se ajusta la cantidad de productos que se colocan por fila*/
-    /*white-space: nowrap;/*para que no de saltos de linea donde no debe haber*/
-    color: white;
-    top: 135px;
-}
-
-.container-bio{
-    /* white-space: nowrap;*/
-    
-    text-align: justify;
-    color: white;
-    display: grid;
-    width: 601px; /* Ajusta el ancho al 100% del viewport */
-    /*height: 550px;*/
-    max-width: 100%; /* Establece el ancho máximo del contenedor */
-    
-    overflow: hidden; /* Evita que el contenido se desborde */
-
-}
-
-.container-bio p {
-    white-space: pre-line; /* Permite que el texto se envuelva automáticamente */
-}
-
-
-
-
-
-
-
-/*-----------------------------PERTENECE A LOS ESTILOS DE LA TIENDA------------------------------------------------------------------------------------------------*/
-
-
-/*-----------------------------PERTENECE A LOS ESTILOS DEL BUSCADOR DE PRODUCTOS-----------------------------------------------------------------------------------*/
-
-
-/* Estilos generales para el buscador */
-.container-search{
-    display: flex; /* Permite que el contenedor se ajuste automáticamente al contenido */
-    justify-content: center;
-    align-items: center;
-    position: relative;
-    background-color: transparent;
-    top: 111px;
-    width: 550px;
-    height: 65px;
-    border: 2px solid white; /* Define el grosor y el color del borde */
-    border-radius: 30px; /* Define el radio de los extremos para hacerlos redondeados */
-    padding: 5px; /* Agrega un poco de espacio interno para que el texto no esté pegado al borde */
-    
-}
-
-/* Estilos para el input */
-.container-search input[type="text"] {
-    background-color: transparent; /* Hace que el fondo del input sea transparente */
-    padding-left: 25px;
-    border: none; /* Elimina el borde predeterminado del input */
-    width: 100%; /* Define el ancho del input */
-    color: white; /*Define el color del texto dentro del search*/
-    font-size: .6em; /*Define el tamaño del texto dentro del search*/
-    outline: none; /* Elimina el contorno al enfocar el input */
-}
-
-/* Estilos para el botón */
-.container-search .btn-search {
-    background-color: transparent; /* Hace que el fondo del botón sea transparente */
-    border: none; /* Elimina el borde del botón */
-    border-radius: 15%;
-    width: 45px;
-    height: 45px;
-    padding: 5px;
-    position: relative;
-    outline: none; /* Elimina el contorno al enfocar el botón */
-    cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
-}
-
-/* Estilos para el icono dentro del botón */
-.container-search .search-icon {
-    width: 24px; /* Define el ancho del icono */
-    height: 24px; /* Define la altura del icono */
-    stroke-width: 1.5; /* Define el grosor de las líneas del icono */
-    stroke: white; /* Define el color de las líneas del icono */
-}
-
-
-/*---------------------------------ESTILOS PARA EL CARRITO---------------------------------------------------------------------------------*/
-
-
-.container-icon {
-    position: relative;
-}
-
-.icon-cart {/*estilos para el icono del carrito*/
-    z-index: 1; /*asegura que no se quedara por debajode ningun otro elemento de la pagina*/
-    width: 65px;
-    height: 65px;
-    stroke: white;
-    cursor: pointer;
-    /* Aquí es donde puedes ajustar las propiedades de posición */
-    position: fixed; /* O position: absolute; dependiendo de tu diseño */
-    top: 600px; /* Cambia este valor para ajustar la posición vertical */
-    right: 25px; /* Cambia este valor para ajustar la posición horizontal */
-    background-color: black;/*color del circulo que contiene el carrito*/
-    background-size: auto;
-    border-radius: 50%;/*para hacerlo redondo el carrito*/
-
-}
-
-.count-products {/*pertenece al contador de productos del carrito*/
-    z-index: 999; /*asegura que no se quedara por debajode ningun otro elemento de la pagina*/
-    position: fixed;
-    top: 590px;/*desplaza el contador de arriba a abajo*/
-    right: 18px;/*desplaza el contador de derecha a izquierda*/
-    background-color: #f90000;/*color del circulo que contiene el numero del contador*/
-    width: 25px;/*ancho del contador*/
-    height: 25px;/*alto del contador*/
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 50%;/*para hacerlo redondo el contador*/
-}
-
-#contador-productos {/*pertenece al contador del carrito*/
-    z-index: 999; /*asegura que no se quedara por debajode ningun otro elemento de la pagina*/
-    font-size: 15px;/*tamaño del texto del numero del contador del carrito*/
-    color: white;/*color del numero del contador de productos*/
-}
-
-/* Estilo para el contenedor de productos del carrito */
-.container-cart-products {
-    position: fixed;
-    top: 115px;/* Coloca el contenido del carrito justo debajo del icono */
-    right: 28px;/*Desplaza el contenido delcarrito de derecha a izquierda*/
-    width: 260px;/* Ajusta el ancho del carrito según sea necesario */
-    background-color: white; /* Cambia el color de fondo según tu diseño */
-    border-radius: 10px; /* Redondea las esquinas */
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.20); /* Añade sombra para resaltar */
-    display: none; /* Oculta el carrito por defecto */
-    z-index: 1; /* Asegura que esté por encima del contenido */
-    overflow-y: auto; /* Habilitar desplazamiento vertical */
-    max-height: calc(100vh - 200px); /* Establecer una altura máxima para el desplazamiento */
-}
-
-.icon-cart:hover {
-    cursor: pointer;
-}
-
-/* Estilo para mostrar el carrito cuando está abierto */
-.container-cart-products.open {
-    display: block;
-}
-
-/*--------------------------Estilo para los productos en el carrito--------------------------------------------------------------------------------*/
-.cart-product {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.20);
-}
-
-.icon-close {
-    display: flex;
-    position: absolute;
-    top: 5px;
-    right: 5px;
-    width: 20px;
-    height: 20px;
-    background-color: black;/*color del circulo que contiene el numero del contador*/
-    width: 25px;/*ancho del contador*/
-    height: 25px;/*alto del contador*/
-    border-radius: 50%;/*para hacerlo circular*/
-    cursor: pointer;
-}
-
-.info-cart-product {
-    color: black;
-    display: inline-block;
-    flex-direction: column;
-    text-align: left;
-}
-
-.icon-delete {
-    color: black;
-}
-
-.cantidad-producto-carrito {
-    
-    font-size: 20px;
-}
-
-.titulo-producto-carrito {
-    font-size: 12px;
-    font-weight: 850;/*para el grosor de la letra adecuado*/
-
-}
-
-.precio-producto-carrito {
-    font-size: 16px;
-}
-
-.icon-delete {
-    width: 15px;
-    height: 15px;
-    cursor: pointer;
-}
-
-.cart-total {
-    color: black;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 20px;
-}
-
-.cart-total h3 {
-    font-size: 18px;
-    font-weight: bold;/*para el grosor de la letra adecuado*/
-}
-
-.total-pagar {
-    font-size: 18px;
-    font-weight: bold;/*para el grosor de la letra adecuado*/
-}
-
-.icon-close:hover {
-    stroke: rgb(0, 0, 0);
-}
-
-/*-------------------------ESTILOS DE LOS PRODUCTOS------------------------------------------------------------------------------------*/
-
-/*sombra para resaltar los productos*/
-.item:hover {
-    box-shadow: 0 20px 30px rgba(0, 0, 0, 0.65);
-}
-
-.container-items {
-    display: flex; /* Establecer el contenedor como un contenedor flexible */
-    flex-wrap: nowrap; /* Evitar que los elementos se envuelvan a una nueva línea */
-    overflow-x: auto; /* Permitir desplazamiento horizontal si los elementos no caben en el contenedor */
-    gap: 20px;/*espacio entre los productos*/
-    margin-left: 1px; /* Ancho espacio entre el nav y los productos*/
-    padding-top: 90px; /* Espacio para compensar la altura del nav */
-}
-
-.item {
-    border-radius: 15px;/*para dar un borde redondeado a nuestro contenedor de imagenes*/
-}
-
-img {
-    max-width: 100%;
-}
-
-.item img {
-    width: 100%;
-    height: 300px;
-    object-fit: cover;/*lo ajustamos para que no se desborde*/
-    border-radius: 15px 15px 0 0;
-    transition: all .5s;
-}
-
-.item figure {
-    border-radius: 15px;
-    overflow: hidden;
-}
-
-.item:hover img {
-    transform: scale(1.2);
-}
-
-.info-product {
-    align-items: center;/*alinia los items de forma centrada*/
-    padding: 15px 30px;/*espaciado entre la informacion*/
-    line-height: 1;
-    display: flex;
-    flex-direction: column;
-    gap: 5px;
-}
-
-/*color del texto del nombre del producto*/
-.info-product h2{
-    color: white;
-    text-align: center; /* Centrar el texto horizontalmente */
-}
-
-.price {
-    color: white;
-    font-size: 18px;
-    font-weight: 900px;
-}
-
-
-.info-product button {
-    width: 180px;
-    border-radius: 10px;
-    border: none;
-    background: black;
-    color: white;
-    padding: 12px 5px;
-    cursor: pointer;
-}
-
-
-
-/*--------------------------------------------------ESTILOS PARA SETINGS PROFILE---------------------------------------------------------------------------*/
-.conteiner-menu-config-options{
-    position: absolute; /* O position: absolute; dependiendo de tu diseño */
-    width: 1000px;
-    height: 500px;
-    background: transparent;
-    border: 3px solid white;
-    border-radius: 6px;
-    color: rgb(255, 255, 255);
-}
-
-.container-icon-options{
-    position: absolute;
-    top: 0px;
-    bottom: 0;
-    overflow: auto;
-}
-
-.container-icon-options .profile-nav-item {
-    color: white;/*da el color negro al texto de aladoo de cada icono*/
-    display: inline-block; /* Mostrar en línea */
-    vertical-align: middle; /* Alinear verticalmente al centro */
-    font-weight: bold;
-    font-size: 18px;
-    text-transform: uppercase;
-    padding-left: 20px; /*espaciado de el texto con el icono*/
-}
-
-svg .icon-menu-profile{
-    display: table;/*dispone los elementos en forma de tabla*/
-    position: relative;
-    margin: 1px 1px 1px 0px;
-    width: 40px;
-    height: 40px;
-    
-}
-.container-icon-options .icon-options {
-    display: flex; /* Cambiar a flex */
-    align-items: center; /* Alinear verticalmente al centro */
-    margin-bottom: 20px; /* Agrega un espacio de 20px hacia abajo */
-    margin-right: 10px; /* Opcional: Añadir margen entre el icono y el texto */
-}
-
-.container-icon-options .icon-options svg {
-    width: 40px;/*tamaño fijo para los iconos */
-    height: 40px;
-    color: white;/*color de cada icono utilizado para el menu de configuracion*/
-}
-
-.list-options-menu li button{
-    background-color: transparent;
-    
-}
-
-.list-options-menu li button:hover{
-    cursor: pointer;
-    border-color: white;
-
-}
-.config-sub-options{
-    position: absolute;
-    left: 350px;
-    overflow: auto;
-}
-.buttom-exit{
-    background-color: transparent;
-
-}
-.exit-account{
-    position: fixed;
-    background-color: transparent;
-
-}
-.icon-logout{
-    color: white;
-    align-items: center;
-}
-.logout-icon{
-    color: white;
-}
-
-
 /*--------------------------------------------------ESTILOS PARA INICIO DE SECION--------------------------------------------------------------------------*/
 
 
@@ -724,10 +177,18 @@ svg .icon-menu-profile{
 
 
 
+.btnLogin{
+    display: grid;
+    position: fixed;
+    top: 35px;
+    right: 15px;
+    z-index: 1;
+}
+
 .btnLogin-popup {
-    position: fixed; /* O position: absolute; dependiendo de tu diseño */
-    top: 60px; /* Cambia este valor para ajustar la posición vertical */
-    right: 25px; /* Cambia este valor para ajustar la posición horizontal */
+    /*position: fixed; /* O position: absolute; dependiendo de tu diseño */
+    /*top: 60px; /* Cambia este valor para ajustar la posición vertical */
+    /*right: 25px; /* Cambia este valor para ajustar la posición horizontal */
     width: 130px;
     height: 50px;
     background: transparent;
@@ -750,9 +211,12 @@ svg .icon-menu-profile{
 }
 
 .wrapper {
+    display: grid;
+    justify-content: center;
+    align-items: center;
     position: fixed;
     top: auto;
-    right: 36%;
+    right: 0%;
     width: 400px;
     height: 440px;
     background: transparent;
@@ -760,9 +224,6 @@ svg .icon-menu-profile{
     border-radius: 20px;
     backdrop-filter: blur(20px);
     box-shadow: 0 0 30px rgba(0, 0, 0, .5);
-    display: grid;
-    justify-content: center;
-    align-items: center;
     overflow: hidden;
     transform: scale(0);
     transition: transform .5s ease, heigth .2s ease;
@@ -951,6 +412,583 @@ svg .icon-menu-profile{
 .login-register a {
     color: white;
 }
+
+/*-----------------------------ESTILOS DEL ENCABEZADO DE LA PAGINA-----------------------------------------------*/
+
+main{/*estilos para el main (se aplica de forma global)*/
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    overflow-y: auto;
+    padding-top: 140px;
+}
+
+footer{
+    background-color: #000;/*para darle color a el fondo detras de los titulos principales*/
+    width: 100%;/*para el tamaño del ancho*/
+    height: 120px;/*para el tamaño del alto*/
+    text-align: center;/*para centrar el texto*/
+    justify-content: center;/*para centrar los elementos horizontalmente*/
+    align-items: center;/*para centrar los elementos verticalmente*/
+
+}
+.backgraund-title{
+    position: fixed;
+    background-color: #000;/*para darle color a el fondo detras de los titulos principales*/
+    width: 100%;/*para el tamaño del ancho*/
+    height: 120px;/*para el tamaño del alto*/
+    text-align: center;/*para centrar el texto*/
+    justify-content: center;/*para centrar los elementos horizontalmente*/
+    align-items: center;/*para centrar los elementos verticalmente*/
+}
+.container-title{
+    white-space: nowrap;
+    display: grid;
+    justify-content: center;/*para centrar los elementos horizontalmente*/
+    align-items: center;/*para centrar los elementos verticalmente*/
+    text-align: center;/*para centrar el texto*/
+    font-size: 45px;/*tamaño de letra*/
+}
+
+.container-title h1{
+    display: grid;
+    text-align: center;/*para centrar el texto*/
+    justify-content: center;/*para centrar los elementos horizontalmente*/
+    align-items: center;/*para centrar los elementos verticalmente*/
+    color: white;
+}
+
+
+
+
+
+
+
+/*-----------------------------PERTENECE A LOS ESTILOS DEL INICIO----------------------------------------------------------------------------------------------------*/
+
+.container-subtitle h2{
+    text-align: center;
+    /*white-space: nowrap;*/
+    color: white;
+    font-size: 3em;
+}
+.container-subtitle b{
+    white-space: nowrap;
+    color: white;
+}
+.container-text p{
+    white-space: nowrap;
+    color: white;
+}
+
+/*---------------------------Corresponde a los estilos del bloque de left 4 dead 2----------------------------------------------------------------------------------*/
+.container-title h2{
+    /*white-space: nowrap;*/
+    color: white;
+    display: flex;
+    font-size: 30px;
+    padding: 15px;
+}
+
+.video-container{
+    padding-top: 15px;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    white-space: nowrap;
+    width: 100%;
+    /*margin-bottom: 20px; /* Esto es opcional, ajusta el margen según tus necesidades */
+}
+
+.container-videos{
+    display: inline-block;
+    margin-right: 20px;
+}
+
+
+
+
+
+
+
+
+/*-----------------------------PERTENECE A LOS ESTILOS DE REDES SOCIALES------------------------------------------------------------------------------------------------*/
+
+
+
+
+
+
+  
+/* Estilos para la página de redes sociales */
+.container-enlaces {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 columnas de tamaño igual */
+    grid-gap: 20px; /* Espacio entre las imágenes */
+    max-width: 450px; /*Ajusta el ancho maximo del contenedor */
+    margin: 0 auto; /* Centra horizontalmente el contenedor */
+}
+  
+.container-enlaces a {
+
+    width: 100%; /* Toma el ancho completo de su contenedor */
+    text-align: center; /* Centra el contenido horizontalmente */
+}
+
+.container-enlaces a img{
+    max-width: 150px;/*tamaño maximo para los logos de las redes sociales*/
+    height: auto;/*alto automatico wn relacion con el max-width*/
+}
+  
+.container-enlaces a:nth-child(1) img {
+    filter: drop-shadow(5px 5px 5px rgba(59, 89, 152, 0.8)); /* Sombra azul para Facebook */
+}
+  
+.container-enlaces a:nth-child(2) img {
+    filter: drop-shadow(5px 5px 5px rgba(219, 72, 129, 0.8)); /* Sombra rosa-morada para Instagram */
+}
+
+.container-enlaces a:nth-child(3) img {
+    filter: drop-shadow(5px 5px 5px rgba(255, 0, 0, 0.8)); /* Sombra roja para youtube */
+}
+
+.container-enlaces a:nth-child(4) img {
+    filter: drop-shadow(5px 5px 5px rgba(187, 0, 255, 0.8)); /* Sombra morada para twitch */
+}
+
+.container-enlaces a:nth-child(5) img {
+    filter: drop-shadow(5px 5px 5px rgba(63, 133, 255, 0.8)); /* Sombra azul para tiktok */
+}
+
+.container-enlaces a:nth-child(6) img {
+    filter: drop-shadow(5px 5px 5px rgba(255, 255, 255, 0.8)); /* Sombra blanca para x */
+}
+
+.container-enlaces a:nth-child(7) img {
+    filter: drop-shadow(5px 5px 5px rgba(83, 67, 255, 0.8)); /* Sombra morada-azul para discord */
+    /*max-width: 100%;*/
+}
+
+
+
+
+
+/*-----------------------------PERTENECE A LOS ESTILOS DE SOBRE MI-------------------------------------------------------------------------------------------------*/
+
+
+
+
+
+
+
+
+
+.container-date{
+    grid-template-columns: repeat(2, 1fr);/*aqui se ajusta la cantidad de productos que se colocan por fila*/
+    white-space: nowrap;/*para que no de saltos de linea donde no debe haber*/
+    color: white;
+    display: grid;
+    margin-left: 10px;
+    padding: 25px 0px;/*ajusta el relleno segun sea necesario*/
+}
+
+.container-date b{
+    padding: 10px;
+    color: white;
+}
+
+.container-bio{
+    /* white-space: nowrap;*/
+    text-align: justify;
+    color: white;
+    display: grid;
+    width: 601px; /* Ajusta el ancho al 100% del viewport */
+    height: 550px;
+    max-width: 100%; /* Establece el ancho máximo del contenedor */
+    overflow: auto; /* Evita que el contenido se desborde */
+
+}
+
+.container-bio p {
+    
+    white-space: pre-line; /* Permite que el texto se envuelva automáticamente */
+}
+
+
+
+
+
+
+
+/*-----------------------------PERTENECE A LOS ESTILOS DE LA TIENDA------------------------------------------------------------------------------------------------*/
+
+
+/*-----------------------------PERTENECE A LOS ESTILOS DEL BUSCADOR DE PRODUCTOS-----------------------------------------------------------------------------------*/
+
+
+/* Estilos generales para el buscador */
+
+.container-search{/*contenedor para el centrado de la barra de busqueda*/
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    position: static;
+}
+.search-container{
+    display: flex; /* Permite que el contenedor se ajuste automáticamente al contenido */
+    justify-content: center;
+    align-items: center;
+    background-color: transparent;
+    width: 550px;
+    height: 65px;
+    border: 2px solid white; /* Define el grosor y el color del borde */
+    border-radius: 30px; /* Define el radio de los extremos para hacerlos redondeados */
+    
+}
+
+/* Estilos para el input */
+.search-container input[type="text"] {
+    background-color: transparent; /* Hace que el fondo del input sea transparente */
+    padding-left: 25px;
+    padding-right: 25px;
+    border: none; /* Elimina el borde predeterminado del input */
+    width: 100%; /* Define el ancho del input */
+    color: white; /*Define el color del texto dentro del search*/
+    font-size: 1.5em; /*Define el tamaño del texto dentro del search*/
+    outline: none; /* Elimina el contorno al enfocar el input */
+}
+
+/* Estilos para el botón */
+.btn-search {
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    background-color: white; /* Hace que el fondo del SVG de busqueda sea blanco */
+    width: 65px;
+    height: 65px;
+    border-radius: 0 30px 30px 0;
+}
+
+/* Estilos para el icono dentro del botón */
+.search-icon {
+    width: 34px; /* Define el ancho del icono */
+    height: 34px; /* Define la altura del icono */
+    stroke-width: 1.5; /* Define el grosor de las líneas del icono */
+    stroke: black; /* Define el color de las líneas del icono */
+    
+}
+
+
+/*---------------------------------ESTILOS PARA EL CARRITO---------------------------------------------------------------------------------*/
+
+
+.container-icon {
+    position: relative;
+}
+
+.icon-cart {/*estilos para el icono del carrito*/
+    z-index: 1; /*asegura que no se quedara por debajode ningun otro elemento de la pagina*/
+    width: 65px;
+    height: 65px;
+    stroke: white;
+    cursor: pointer;
+    /* Aquí es donde puedes ajustar las propiedades de posición */
+    position: fixed; /* O position: absolute; dependiendo de tu diseño */
+    top: 600px; /* Cambia este valor para ajustar la posición vertical */
+    right: 25px; /* Cambia este valor para ajustar la posición horizontal */
+    background-color: black;/*color del circulo que contiene el carrito*/
+    background-size: auto;
+    border-radius: 50%;/*para hacerlo redondo el carrito*/
+
+}
+
+.count-products {/*pertenece al contador de productos del carrito*/
+    z-index: 999; /*asegura que no se quedara por debajode ningun otro elemento de la pagina*/
+    position: fixed;
+    top: 590px;/*desplaza el contador de arriba a abajo*/
+    right: 18px;/*desplaza el contador de derecha a izquierda*/
+    background-color: #f90000;/*color del circulo que contiene el numero del contador*/
+    width: 25px;/*ancho del contador*/
+    height: 25px;/*alto del contador*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;/*para hacerlo redondo el contador*/
+}
+
+#contador-productos {/*pertenece al contador del carrito*/
+    z-index: 999; /*asegura que no se quedara por debajode ningun otro elemento de la pagina*/
+    font-size: 15px;/*tamaño del texto del numero del contador del carrito*/
+    color: white;/*color del numero del contador de productos*/
+}
+
+/* Estilo para el contenedor de productos del carrito */
+.container-cart-products {
+    position: fixed;
+    top: 115px;/* Coloca el contenido del carrito justo debajo del icono */
+    right: 28px;/*Desplaza el contenido delcarrito de derecha a izquierda*/
+    width: 260px;/* Ajusta el ancho del carrito según sea necesario */
+    background-color: white; /* Cambia el color de fondo según tu diseño */
+    border-radius: 10px; /* Redondea las esquinas */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.20); /* Añade sombra para resaltar */
+    display: none; /* Oculta el carrito por defecto */
+    z-index: 1; /* Asegura que esté por encima del contenido */
+    overflow-y: auto; /* Habilitar desplazamiento vertical */
+    max-height: calc(100vh - 200px); /* Establecer una altura máxima para el desplazamiento */
+}
+
+.icon-cart:hover {
+    cursor: pointer;
+}
+
+/* Estilo para mostrar el carrito cuando está abierto */
+.container-cart-products.open {
+    display: block;
+}
+
+/*--------------------------Estilo para los productos en el carrito--------------------------------------------------------------------------------*/
+.cart-product {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.20);
+}
+
+.icon-close {
+    display: flex;
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    width: 20px;
+    height: 20px;
+    background-color: black;/*color del circulo que contiene el numero del contador*/
+    width: 25px;/*ancho del contador*/
+    height: 25px;/*alto del contador*/
+    border-radius: 50%;/*para hacerlo circular*/
+    cursor: pointer;
+}
+
+.info-cart-product {
+    color: black;
+    display: inline-block;
+    flex-direction: column;
+    text-align: left;
+}
+
+.icon-delete {
+    color: black;
+}
+
+.cantidad-producto-carrito {
+    
+    font-size: 20px;
+}
+
+.titulo-producto-carrito {
+    font-size: 12px;
+    font-weight: 850;/*para el grosor de la letra adecuado*/
+
+}
+
+.precio-producto-carrito {
+    font-size: 16px;
+}
+
+.icon-delete {
+    width: 15px;
+    height: 15px;
+    cursor: pointer;
+}
+
+.cart-total {
+    color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.cart-total h3 {
+    font-size: 18px;
+    font-weight: bold;/*para el grosor de la letra adecuado*/
+}
+
+.total-pagar {
+    font-size: 18px;
+    font-weight: bold;/*para el grosor de la letra adecuado*/
+}
+
+.icon-close:hover {
+    stroke: rgb(0, 0, 0);
+}
+
+/*-------------------------ESTILOS DE LOS PRODUCTOS------------------------------------------------------------------------------------*/
+
+/*sombra para resaltar los productos*/
+.item:hover {
+    box-shadow: 0 20px 30px rgba(0, 0, 0, 0.65);
+}
+
+
+.container-elements{
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    padding: 90px 100px; /* Espacio para compensar la altura del nav */
+    margin-left: 1px; /* Ancho espacio entre el nav y los productos*/
+    overflow: auto;
+}
+
+.container-items {
+    display: flex; /* Establecer el contenedor como un contenedor flexible */
+    flex-wrap: nowrap; /* Evitar que los elementos se envuelvan a una nueva línea */
+    overflow: auto; /* Permitir desplazamiento horizontal si los elementos no caben en el contenedor */
+    gap: 20px;/*espacio entre los productos*/
+    width: 1000px;
+    height: auto;
+}
+
+.item {
+    border-radius: 15px;/*para dar un borde redondeado a nuestro contenedor de imagenes*/
+}
+
+img {
+    max-width: 100%;
+}
+
+.item img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;/*lo ajustamos para que no se desborde*/
+    border-radius: 15px 15px 0 0;
+    transition: all .5s;
+}
+
+.item figure {
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+.item:hover img {
+    transform: scale(1.2);
+}
+
+.info-product {
+    align-items: center;/*alinia los items de forma centrada*/
+    padding: 15px 30px;/*espaciado entre la informacion*/
+    line-height: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+/*color del texto del nombre del producto*/
+.info-product h2{
+    color: white;
+    text-align: center; /* Centrar el texto horizontalmente */
+}
+
+.price {
+    color: white;
+    font-size: 18px;
+    font-weight: 900px;
+}
+
+
+.info-product button {
+    width: 180px;
+    border-radius: 10px;
+    border: none;
+    background: black;
+    color: white;
+    padding: 12px 5px;
+    cursor: pointer;
+}
+
+
+
+/*--------------------------------------------------ESTILOS PARA SETINGS PROFILE---------------------------------------------------------------------------*/
+.conteiner-menu-config-options{
+    position: absolute; /* O position: absolute; dependiendo de tu diseño */
+    width: 1000px;
+    height: 500px;
+    background: transparent;
+    border: 3px solid white;
+    border-radius: 6px;
+    color: rgb(255, 255, 255);
+}
+
+.container-icon-options{
+    position: absolute;
+    top: 0px;
+    bottom: 0;
+    overflow: auto;
+}
+
+.container-icon-options .profile-nav-item {
+    color: white;/*da el color negro al texto de aladoo de cada icono*/
+    display: inline-block; /* Mostrar en línea */
+    vertical-align: middle; /* Alinear verticalmente al centro */
+    font-weight: bold;
+    font-size: 18px;
+    text-transform: uppercase;
+    padding-left: 20px; /*espaciado de el texto con el icono*/
+}
+
+svg .icon-menu-profile{
+    display: table;/*dispone los elementos en forma de tabla*/
+    position: relative;
+    margin: 1px 1px 1px 0px;
+    width: 40px;
+    height: 40px;
+    
+}
+.container-icon-options .icon-options {
+    display: flex; /* Cambiar a flex */
+    align-items: center; /* Alinear verticalmente al centro */
+    margin-bottom: 20px; /* Agrega un espacio de 20px hacia abajo */
+    margin-right: 10px; /* Opcional: Añadir margen entre el icono y el texto */
+}
+
+.container-icon-options .icon-options svg {
+    width: 40px;/*tamaño fijo para los iconos */
+    height: 40px;
+    color: white;/*color de cada icono utilizado para el menu de configuracion*/
+}
+
+.list-options-menu li button{
+    background-color: transparent;
+    
+}
+
+.list-options-menu li button:hover{
+    cursor: pointer;
+    border-color: white;
+
+}
+.config-sub-options{
+    position: absolute;
+    left: 350px;
+    overflow: auto;
+}
+.buttom-exit{
+    background-color: transparent;
+
+}
+.exit-account{
+    position: fixed;
+    background-color: transparent;
+
+}
+.icon-logout{
+    color: white;
+    align-items: center;
+}
+.logout-icon{
+    color: white;
+}
+
+
 
 /*---------------------------------boton de exit-----------------*/
 
@@ -1187,7 +1225,7 @@ svg .icon-menu-profile{
 
     
     /* Estilos generales para el buscador */
-    .container-search{
+    .search-container{
         top: 0px;
         right: 0px;
         left: 14px;
@@ -1197,7 +1235,7 @@ svg .icon-menu-profile{
     }
 
     /* Estilos para el input */
-    .container-search input[type="text"] {
+    .search-container input[type="text"] {
         background-color: transparent; /* Hace que el fondo del input sea transparente */
         padding-left: 5px;
         border: 5px; /* Elimina el borde predeterminado del input */
@@ -1208,14 +1246,14 @@ svg .icon-menu-profile{
     }
 
     /* Estilos para el botón */
-    .container-search .btn-search {
+    .search-container .btn-search {
         width: 15px;
         height: 15px;
         padding: 0px;
     }
 
     /* Estilos para el icono dentro del botón */
-    .container-search .search-icon {
+    .search-container .search-icon {
         width: 10px; /* Define el ancho del icono */
         height: 10px; /* Define la altura del icono */
     }
